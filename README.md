@@ -47,7 +47,8 @@ THIS PART IS FOR WINDOWS
 step 3
 copy the uiohook.lib file into the luaohook folder
 ```
-copy libuiohook/dist/lib/uiohook.lib .
+setx PATH "%CD%;%PATH%"
+copy "libuiohook\dist\lib\uiohook.lib" .
 ```
 
 Step 4
