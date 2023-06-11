@@ -9,7 +9,7 @@ The steps might not be 100% correct, if you see some commands aren't working, be
 Step 1
 Clone this repo
 ```
-git https://github.com/justdie386/luaohook
+git clone https://github.com/justdie386/luaohook
 cd luaohook
 ```
 Step 2
