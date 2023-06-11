@@ -9,7 +9,8 @@ The steps might not be 100% correct, if you see some commands aren't working, be
 Step 1
 Clone this repo
 ```
-git https://github.com/justdie386/luaohook/; cd luaohook
+git https://github.com/justdie386/luaohook/
+cd luaohook
 ```
 Step 2
 Build and install libuiohook for your platform (For archlinux users, use the AUR version named libuiohook)
