@@ -55,7 +55,7 @@ step 3
 copy the uiohook.lib file into the luaohook folder
 ```
 setx PATH "%CD%;%PATH%"
-copy "libuiohook\dist\lib\uiohook.lib" .
+copy "libuiohook\dist\lib\uiohook.lib" . /y
 ```
 
 Step 4
