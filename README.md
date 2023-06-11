@@ -1,5 +1,7 @@
 # luaohook
 
+Thanks to kwat for making https://github.com/kwhat/libuiohook (Credit i guess)
+
 This library is cross platform, but i don't have instructions on how to build this on windows.
 If the steps below won't work, then you are on your own
 
