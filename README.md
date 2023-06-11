@@ -27,6 +27,7 @@ Step 3
 Copy the uiohook.so file
 
 ```
+cd .. && cd ..
 cp libuiohook/build/uiohook.so .
 ```
 Step 4
@@ -53,6 +54,7 @@ Step 4
 build the .dll file for keyboard press
 
 ```
+cd .. && cd ..
 gcc keyboard.c -fPIC -Wall -shared -o keyboard.dll ./lua.lib ./uiohook.lib
 ```
 Step 5
