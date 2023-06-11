@@ -1,5 +1,18 @@
-//big thanks to nameless (truemedian) for making this script
-//to show me how to the lua c api stack works
+/*
+ *    Luaohook is a library built around libuiohook to provide global keyboard
+ *    hooks for lua made by Justin Bouchard.  All Rights Reserved.
+ *    https://github.com/justdie386/luaohook
+ *
+ *    This program is free software: you can redistribute it and/or modify
+ *    it under the terms of the GNU General Public License as published by
+ *    the Free Software Foundation, either version 3 of the License, or
+ *    (at your option) any later version.
+ *
+ *    This program is distributed in the hope that it will be useful,
+ *    but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *    GNU General Public License for more details.
+ */
 #include <lua5.1/lauxlib.h>
 #include <lua5.1/lua.h>
 #include <uiohook.h>
