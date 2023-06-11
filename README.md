@@ -3,14 +3,13 @@
 This library is cross platform, but i don't have instructions on how to build this on windows.
 If the steps below won't work, then you are on your own
 
-I highly recommend you instead try out mingw if you are indeed on windows.
-
+THE BUILD INSTRUCTIONS WON"T WORK OUTSIDE OF LINUX MAYBE ON MAC TOO
 Step 1
 Build and install libuiohook for your platform (For archlinux users, use the AUR version named libuiohook)
 
 ```
  git clone https://github.com/kwhat/libuiohook
- cd uiohook
+ cd libuiohook
  mkdir build && cd build
  cmake -S .. -D BUILD_SHARED_LIBS=ON -D BUILD_DEMO=ON -DCMAKE_INSTALL_PREFIX=../dist
  cmake --build . --parallel 2 --target install  
