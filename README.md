@@ -17,15 +17,19 @@ Build and install libuiohook for your platform (For archlinux users, use the AUR
  cmake -S .. -D BUILD_SHARED_LIBS=ON -D BUILD_DEMO=ON -DCMAKE_INSTALL_PREFIX=../dist
  cmake --build . --parallel 2 --target install  
 ```
-
 Step 2
+Clone this repo
+```
+git https://github.com/justdie386/luaohook/; cd luaohook
+```
+Step 3
 Build the .so file for the keyboard press
 
 ```
 gcc -fPIC -Wall -shared -llua5.1 -luiohook press.c -o press.so
 ```
 
-Step 3
+Step 4
 Build the .so file for the keyboard listener
 
 ```
