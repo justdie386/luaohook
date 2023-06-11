@@ -22,12 +22,19 @@ Build and install libuiohook for your platform (For archlinux users, use the AUR
  cmake -S .. -D BUILD_SHARED_LIBS=ON -D BUILD_DEMO=ON -DCMAKE_INSTALL_PREFIX=../dist
  cmake --build . --parallel 2 --target install  
 ```
+Step 3
+Download the lua .h files
+if you aren't on windows, then you can just change the #include in the c files to <lua5.1/*file*.h>
+```
+cd .. && cd ..
+wget www.lua.org/ftp/lua-5.1.5.tar.gz
+tar -xf lua-5.1.5.tar.gz
+```
 THIS PART IS FOR LINUX/MACOS/BSD
 Step 3
 Copy the uiohook.so file
 
 ```
-cd .. && cd ..
 cp libuiohook/build/uiohook.so .
 ```
 Step 4
@@ -47,7 +54,6 @@ THIS PART IS FOR WINDOWS
 step 3
 copy the uiohook.lib file into the luaohook folder
 ```
-cd .. && cd ..
 setx PATH "%CD%;%PATH%"
 copy "libuiohook\dist\lib\uiohook.lib" .
 ```
