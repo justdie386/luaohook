@@ -1,3 +1,4 @@
+-- run this to test if the library was correctly built
 package.cpath = "./?.so"
 
 local press = require"press"
