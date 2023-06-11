@@ -164,7 +164,7 @@ static const struct luaL_Reg luiohook_funcs[] = {
     {"unregister", luiohook_unregister},
     {NULL, NULL}};
 
-int luaopen_luaohook(lua_State *L) {
+int luaopen_keyboard(lua_State *L) {
   lua_pushstring(L, "uiohook_key_pressed");
   lua_newtable(L);
   lua_settable(L, LUA_REGISTRYINDEX);
