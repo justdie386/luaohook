@@ -60,8 +60,10 @@ copy "libuiohook\dist\lib\uiohook.lib" . /y
 ```
 Step 5
 build lua's needed dependencies
+if you get any errors, then download visual studio and the C/C++ components stuff
 ```
 wget https://raw.githubusercontent.com/Pharap/CompilingLua/master/Compile.bat -o lua-5.1.5/compile.bat
+.\lua-5.1.5\compile.bat
 ```
 
 Step 6
