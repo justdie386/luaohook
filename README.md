@@ -31,3 +31,13 @@ gcc -fPIC -Wall -shared -llua5.1 -luiohook keyboard.c -o keyboard.so
 ```
 
 Annnnd you are now done, if you didn't get any errors, you should have two .so files in your current folder
+
+**TROUBLESHOOTING**
+
+if you are having a windows error about a missing dll.
+Go to the libuiohook's build folder, and copy the .dll to your current directory
+
+If you are getting weird errors about some uiohook functions stuff. 
+make sure the compiler can find the uiohook.h from the libuiohook/include folder
+if its just not working, edit the .c file and change this line
+`#include <uiohook.h>` to `#include "uiohook.h"` then try compiling again
