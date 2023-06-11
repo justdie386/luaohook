@@ -66,7 +66,7 @@ Annnnd you are now done, if you didn't get any errors, you should have two .so f
 
 ```lua
 
-package.cpath = "./?.so"
+package.cpath = "./?.so" --or .dll for windows
 
 local press = require"press"
 local keyboard = require"keyboard"
