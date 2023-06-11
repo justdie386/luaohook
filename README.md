@@ -41,4 +41,23 @@ If you get this issue on mac, try the same but by copying the .dylib file
 If you are getting weird errors about some uiohook functions stuff. 
 make sure the compiler can find the uiohook.h from the libuiohook/include folder
 if its just not working, edit the .c file and change this line
-`#include <uiohook.h>` to `#include "uiohook.h"` then try compiling again
+`#include <uiohook.h>` to `#include "uiohook.h"` then copy the uiohook.h file
+from the libuiohook/include folder to the luaohook directory. Recompile with the
+previous commands and it should be fixed.
+
+
+**USAGE**
+
+```lua
+
+package.cpath = "./?.so"
+
+local press = require"press"
+local keyboard = require"keyboard"
+keyboard.register(0x001E, function()
+print("nice")
+press.kbpress(0x002E)
+end)
+
+keyboard.run()
+```
