@@ -35,7 +35,8 @@ Annnnd you are now done, if you didn't get any errors, you should have two .so f
 **TROUBLESHOOTING**
 
 if you are having a windows error about a missing dll.
-Go to the libuiohook's build folder, and copy the .dll to your current directory
+Go to the libuiohook/build folder, and copy the .dll to your current directory
+If you get this issue on mac, try the same but by copying the .dylib file
 
 If you are getting weird errors about some uiohook functions stuff. 
 make sure the compiler can find the uiohook.h from the libuiohook/include folder
