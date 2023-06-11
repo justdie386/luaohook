@@ -4,6 +4,7 @@ This library is cross platform, but i don't have instructions on how to build th
 If the steps below won't work, then you are on your own
 
 THE BUILD INSTRUCTIONS WON"T WORK OUTSIDE OF LINUX MAYBE ON MAC TOO
+
 Step 1
 Build and install libuiohook for your platform (For archlinux users, use the AUR version named libuiohook)
 
