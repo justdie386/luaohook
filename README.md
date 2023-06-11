@@ -70,12 +70,12 @@ Step 6
 build the .dll file for keyboard press
 
 ```
-gcc keyboard.c -fPIC -Wall -shared -o keyboard.dll ./lua.lib ./uiohook.lib
+gcc keyboard.c -fPIC -Wall -shared -o keyboard.dll ./lua-5.1.5/src/lua.lib ./uiohook.lib
 ```
 Step 7
 
 ```
-gcc press.o -fPIC -Wall -shared -o press.dll ./lua.lib ./uiohook.lib
+gcc press.o -fPIC -Wall -shared -o press.dll ./lua-5.1.5/src/lua.lib ./uiohook.lib
 ```
 Annnnd you are now done, if you didn't get any errors, you should have two .so files in your current folder
 
