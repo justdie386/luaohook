@@ -62,7 +62,7 @@ Step 5
 build lua's needed dependencies
 if you get any errors, then download visual studio and the C/C++ components stuff
 ```
-wget https://raw.githubusercontent.com/Pharap/CompilingLua/master/Compile.bat -o lua-5.1.5/compile.bat
+wget https://raw.githubusercontent.com/Pharap/CompilingLua/master/Compile.bat -P lua-5.1.5
 .\lua-5.1.5\compile.bat
 ```
 
