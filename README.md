@@ -31,40 +31,46 @@ wget www.lua.org/ftp/lua-5.1.5.tar.gz
 tar -xf lua-5.1.5.tar.gz
 ```
 THIS PART IS FOR LINUX/MACOS/BSD
-Step 3
+Step 4
 Copy the uiohook.so file
 
 ```
 cp libuiohook/build/uiohook.so .
 ```
-Step 4
-Build the .so file for the keyboard press
+Step 5
+Build the .so/.dylib file for the keyboard press
+if on macos change the .so to .dylib on the command below
 
 ```
 gcc -fPIC -Wall -shared -llua5.1 ./uiohook.so press.c -o press.so
 ```
 
-Step 5
-Build the .so file for the keyboard listener
-
+Step 6
+Build the .so/.dylib file for the keyboard listener
+if on macos change the .so to .dylib on the command below
 ```
-gcc -fPIC -Wall -shared -llua5.1 ./uiohook keyboard.c -o keyboard.so
+gcc -fPIC -Wall -shared -llua5.1 ./uiohook.so keyboard.c -o keyboard.so
 ```
 THIS PART IS FOR WINDOWS
-step 3
+step 4
 copy the uiohook.lib file into the luaohook folder
 ```
 setx PATH "%CD%;%PATH%"
 copy "libuiohook\dist\lib\uiohook.lib" . /y
 ```
+Step 5
+build lua's needed dependencies
+```
+wget https://raw.githubusercontent.com/Pharap/CompilingLua/master/Compile.bat -o lua-5.1.5/compile.bat
+```
 
-Step 4
+Step 6
 build the .dll file for keyboard press
 
 ```
 gcc keyboard.c -fPIC -Wall -shared -o keyboard.dll ./lua.lib ./uiohook.lib
 ```
-Step 5
+Step 7
 
 ```
 gcc press.o -fPIC -Wall -shared -o press.dll ./lua.lib ./uiohook.lib
