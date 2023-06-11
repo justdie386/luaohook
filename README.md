@@ -47,6 +47,7 @@ THIS PART IS FOR WINDOWS
 step 3
 copy the uiohook.lib file into the luaohook folder
 ```
+cd .. && cd ..
 setx PATH "%CD%;%PATH%"
 copy "libuiohook\dist\lib\uiohook.lib" .
 ```
@@ -55,7 +56,6 @@ Step 4
 build the .dll file for keyboard press
 
 ```
-cd .. && cd ..
 gcc keyboard.c -fPIC -Wall -shared -o keyboard.dll ./lua.lib ./uiohook.lib
 ```
 Step 5
