@@ -78,7 +78,7 @@ Step 7
 ```
 gcc press.o -fPIC -Wall -shared -o press.dll ./lua-5.1.5/src/lua.lib ./uiohook.lib
 ```
-Annnnd you are now done, if you didn't get any errors, you should have two .so files in your current folder
+Annnnd you are now done, if you didn't get any errors, you should have two .so/.dylib/.dll (depending on your platform) files in your current folder
 
 **USAGE**
 
