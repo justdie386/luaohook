@@ -13,19 +13,19 @@
  *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  *    GNU General Public License for more details.
  */
-#ifdef _WIN32
-#include "lua-5.1.5/src/lauxlib.h"
-#include "lua-5.1.5/src/lua.h"
+
+
+
 #include "libuiohook/include/uiohook.h"
-#else
-#include "lua5.1/lauxlib.h"
-#include "lua5.1/lua.h"
-#endif
 #include <stdlib.h>
 #ifdef _WIN32
 #include <windows.h>
+#include "lua-5.1.5/src/lauxlib.h"
+#include "lua-5.1.5/src/lua.h"
 #define sleep(x) Sleep(1000 * (x))
 #else
+#include "lua5.1/lauxlib.h"
+#include "lua5.1/lua.h"
 #include <unistd.h>
 #endif
 static uiohook_event *event = NULL;

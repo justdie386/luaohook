@@ -16,11 +16,11 @@
 #ifdef _WIN32
 #include "lua-5.1.5/src/lauxlib.h"
 #include "lua-5.1.5/src/lua.h"
-#include "libuiohook/include/uiohook.h"
 #else
 #include "lua5.1/lauxlib.h"
 #include "lua5.1/lua.h"
 #endif
+#include "libuiohook/include/uiohook.h"
 static lua_State *luiohook_state;
 
 void luiohook_on_event(uiohook_event *const event) {
