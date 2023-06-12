@@ -13,10 +13,14 @@
  *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  *    GNU General Public License for more details.
  */
-#include <lua5.1/lauxlib.h>
-#include <lua5.1/lua.h>
-#include <uiohook.h>
-
+#ifdef _WIN32
+#include "lua-5.1.5/src/lauxlib.h"
+#include "lua-5.1.5/src/lua.h"
+#include "libuiohook/include/uiohook.h"
+#else
+#include "lua5.1/lauxlib.h"
+#include "lua5.1/lua.h"
+#endif
 static lua_State *luiohook_state;
 
 void luiohook_on_event(uiohook_event *const event) {
