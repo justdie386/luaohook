@@ -7,7 +7,8 @@ Luaohook is a fully cross platform global keyboard (soon mouse) hooks for lua, b
 **INSTALLATION**
 
 The steps might not be 100% correct, if you see some commands aren't working, because of lets say an incorrect filename, feel free to find the right one yourself
-For windows, i recommend using the x86-x64 developer command prompt
+For windows, i recommend using the x86-x64 developer command prompt, and i recommend using scoop to install both wget and tar as they are going to be used
+for linux, please install the needed lua5.1 packages, for macos use brew install lua@5.1, and for bsd do the same as linux, if you get errors about .a files missing, it means you didn't install it correctly, check for more info about lua in your package manager (example ubuntu has a lua and a lualib-dev or smt, so you would need both)
 
 Step 1
 Clone this repo
@@ -58,6 +59,7 @@ if on macos change the .so to .dylib on the command below
 ```
 gcc -fPIC -Wall -shared -llua5.1 ./uiohook.so keyboard.c -o keyboard.so
 ```
+There ya go, if you didn't get any errors, you should be good to go with it.
 THIS PART IS FOR WINDOWS
 step 4
 copy the uiohook.lib file into the luaohook folder
