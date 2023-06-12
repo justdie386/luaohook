@@ -43,7 +43,8 @@ cp libuiohook/build/uiohook.so .
 ```
 For macos
 ```
-cp libuiohook/build/uiohook.dylib .
+cp libuiohook/build/libuiohook.dylib .
+cp libuiohook/build/libuiohook.1.dylib /usr/local/lib/
 ```
 Step 5
 Build the .so/.dylib file for the keyboard press
@@ -52,12 +53,21 @@ if on macos change the .so to .dylib on the command below
 ```
 gcc -fPIC -Wall -shared -llua5.1 ./uiohook.so press.c -o press.so
 ```
+For macos
+
+```
+gcc -fPIC -Wall -shared -llua5.1 ./libuiohook.dylib press.c -o press.dylib
+```
 
 Step 6
 Build the .so/.dylib file for the keyboard listener
 if on macos change the .so to .dylib on the command below
 ```
 gcc -fPIC -Wall -shared -llua5.1 ./uiohook.so keyboard.c -o keyboard.so
+```
+For maccos
+```
+gcc -fPIC -Wall -shared -llua5.1 ./libuiohook.dylib keyboard.c -o keyboard.dylib
 ```
 There ya go, if you didn't get any errors, you should be good to go with it.
 THIS PART IS FOR WINDOWS
@@ -122,3 +132,4 @@ if its just not working, edit the .c file and change this line
 from the libuiohook/include folder to the luaohook directory. Recompile with the
 previous commands and it should be fixed.
 
+If you get errors about missing files, or incorrect name, but i don't specificacly mention them, pleacse just try to fix it yourself, its not because i sacid those instructions were right thact there won't be any mistakes here and there.
