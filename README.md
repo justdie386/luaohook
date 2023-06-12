@@ -36,7 +36,7 @@ tar -xf lua-5.1.5.tar.gz
 ```
 THIS PART IS FOR LINUX/MACOS/BSD
 Step 4
-Copy the uiohook.so file
+Copy the lib/uiohook.so/.dylib file file
 
 ```
 cp libuiohook/build/uiohook.so .
@@ -46,10 +46,9 @@ For macos
 cp libuiohook/build/libuiohook.dylib .
 cp libuiohook/build/libuiohook.1.dylib /usr/local/lib/
 ```
+Why do you gottac copy it to /usr/local/lib? no clue but it won't work otherwise, if you get an error about it on linux try this fix
 Step 5
 Build the .so/.dylib file for the keyboard press
-if on macos change the .so to .dylib on the command below
-
 ```
 gcc -fPIC -Wall -shared -llua5.1 ./uiohook.so press.c -o press.so
 ```
