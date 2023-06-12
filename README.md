@@ -2,10 +2,12 @@
 
 Thanks to kwat for making https://github.com/kwhat/libuiohook (Credit i guess)
 
-The steps might not be 100% correct, if you see some commands aren't working, because of lets say an incorrect filename, feel free to find the right one yourself
-For windows, i recommend using the x86-x64 developer command prompt
+Luaohook is a fully cross platform global keyboard (soon mouse) hooks for lua, built around libuiohook, a C cross platform keyboard and mouse global hook library.
 
 **INSTALLATION**
+
+The steps might not be 100% correct, if you see some commands aren't working, because of lets say an incorrect filename, feel free to find the right one yourself
+For windows, i recommend using the x86-x64 developer command prompt
 
 Step 1
 Clone this repo
