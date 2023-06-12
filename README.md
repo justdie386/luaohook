@@ -39,7 +39,7 @@ Step 4
 Copy the lib/uiohook.so/.dylib file file
 
 ```
-cp libuiohook/build/uiohook.so .
+cp libuiohook/build/libuiohook.so .
 ```
 For macos
 ```
@@ -50,7 +50,7 @@ Why do you gottac copy it to /usr/local/lib? no clue but it won't work otherwise
 Step 5
 Build the .so/.dylib file for the keyboard press
 ```
-gcc -fPIC -Wall -shared -llua5.1 ./uiohook.so press.c -o press.so
+gcc -fPIC -Wall -shared -llua5.1 ./libuiohook.so press.c -o press.so
 ```
 For macos
 
@@ -62,7 +62,7 @@ Step 6
 Build the .so/.dylib file for the keyboard listener
 if on macos change the .so to .dylib on the command below
 ```
-gcc -fPIC -Wall -shared -llua5.1 ./uiohook.so keyboard.c -o keyboard.so
+gcc -fPIC -Wall -shared -llua5.1 ./libuiohook.so keyboard.c -o keyboard.so
 ```
 For maccos
 ```
