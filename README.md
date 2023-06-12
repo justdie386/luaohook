@@ -40,6 +40,10 @@ Copy the uiohook.so file
 ```
 cp libuiohook/build/uiohook.so .
 ```
+For macos
+```
+cp libuiohook/build/uiohook.dylib .
+```
 Step 5
 Build the .so/.dylib file for the keyboard press
 if on macos change the .so to .dylib on the command below
