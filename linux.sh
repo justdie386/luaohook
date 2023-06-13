@@ -10,5 +10,4 @@
  echo cleaning up...
  rm -rf libuiohook
  rm -rf lua-5.1.5
-figlet luaohook
-echo enjoy!
+echo Done!
