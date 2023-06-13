@@ -5,7 +5,10 @@ Thanks to kwat for making https://github.com/kwhat/libuiohook (Credit i guess)
 Luaohook is a fully cross platform global keyboard (soon mouse) hooks for lua, built around libuiohook, a C cross platform keyboard and mouse global hook library.
 
 **INSTALLATION**
-Install scripts if you'd rather this over the manual instal, if it fails then i recommend doing the manual to see where and why linux
+
+Install scripts if you'd rather this over the manual instal, if it fails then i recommend doing the manual to see where and why 
+
+linux
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/justdie386/luaohook/main/linux.sh)"
 ```
