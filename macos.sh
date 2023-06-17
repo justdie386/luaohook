@@ -8,7 +8,4 @@
  cp libuiohook/build/libuiohook.1.dylib /usr/local/lib/
 gcc -fPIC -Wall -shared -llua5.1 ./libuiohook.dylib press.c -o press.dylib
 gcc -fPIC -Wall -shared -llua5.1 ./libuiohook.dylib keyboard.c -o keyboard.dylib
- echo cleaning up...
- rm -rf libuiohook
- rm -rf lua-5.1.5
 echo Done!
