@@ -7,7 +7,4 @@
  cp libuiohook/build/libuiohook.so .
  gcc -fPIC -Wall -shared -llua5.1 ./libuiohook.so press.c -o press.so
  gcc -fPIC -Wall -shared -llua5.1 ./libuiohook.so keyboard.c -o keyboard.so
- echo cleaning up...
- rm -rf libuiohook
- rm -rf lua-5.1.5
 echo Done!
