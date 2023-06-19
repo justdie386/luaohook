@@ -6,7 +6,9 @@ Luaohook is a fully cross platform global keyboard (soon mouse) hooks for lua, b
 
 **INSTALLATION**
 
-Install scripts if you'd rather this over the manual instal, if it fails then i recommend doing the manual to see where and why 
+Install scripts if you'd rather this over the manual install, if it fails then i recommend doing the manual to see where and why 
+
+if you already have the lua headers and dependencies for your platform then skip the steps that is going to download lua file, just use the steps to build libuiohook and gcc to get the .so/.dylib/.dll 
 
 linux
 ```
