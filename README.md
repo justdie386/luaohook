@@ -20,9 +20,7 @@ macos
 ```
 the script just runs all those commands, instead of copying them manually.
 
-The steps might not be 100% correct, if you see some commands aren't working, because of lets say an incorrect filename, feel free to find the right one yourself
-For windows, i recommend using the x86-x64 developer command prompt, and i recommend using scoop to install both wget and tar as they are going to be used
-for linux, please install the needed lua5.1 packages, for macos use brew install lua@5.1, and for bsd do the same as linux, if you get errors about .a files missing, it means you didn't install it correctly, check for more info about lua in your package manager (example ubuntu has a lua and a lualib-dev or smt, so you would need both)
+The installation for windows might not work correctly, as CL is pretty weird. The steps might not work with a simpel copy past, so please just read the error and try to fix it before giving up. On linux, you might need to install more than the lua5.1 package, example ubuntu has lua and the liblua-dev package, which will need to be installed too, so watch out if you already have lua installed get missing files errors.
 
 Step 1
 Clone this repo
@@ -54,33 +52,36 @@ Copy the lib/uiohook.so/.dylib file file
 
 ```
 cp libuiohook/build/libuiohook.so .
+sudo cp libuiohook/build/libuiohook.so.1 /usr/lib
 ```
 For macos
 ```
 cp libuiohook/build/libuiohook.dylib .
-cp libuiohook/build/libuiohook.1.dylib /usr/local/lib/
+sudo cp libuiohook/build/libuiohook.1.dylib /usr/local/lib/
 ```
 Why do you gottac copy it to /usr/local/lib? no clue but it won't work otherwise, if you get an error about it on linux try this fix
 Step 5
 Build the .so/.dylib file for the keyboard press
 ```
-gcc -fPIC -Wall -shared -llua5.1 ./libuiohook.so press.c -o press.so
+gcc -fPIC -Wall -shared  keyboard.c -o keyboard.so -llua5.1 -L. -luiohook
 ```
 For macos
 
 ```
-gcc -fPIC -Wall -shared -llua5.1 ./libuiohook.dylib press.c -o press.dylib
+gcc -fPIC -Wall -shared  keyboard.c -o keyboard.dylib -llua5.1 -L. -luiohook
 ```
 
 Step 6
 Build the .so/.dylib file for the keyboard listener
 if on macos change the .so to .dylib on the command below
 ```
-gcc -fPIC -Wall -shared -llua5.1 ./libuiohook.so keyboard.c -o keyboard.so
+gcc -fPIC -Wall -shared  mouse.c -o mouse.so -llua5.1 -L. -luiohook
+
 ```
 For maccos
 ```
-gcc -fPIC -Wall -shared -llua5.1 ./libuiohook.dylib keyboard.c -o keyboard.dylib
+gcc -fPIC -Wall -shared  mouse.c -o mouse.dylib -llua5.1 -L. -luiohook
+
 ```
 There ya go, if you didn't get any errors, you should be good to go with it.
 THIS PART IS FOR WINDOWS
@@ -140,9 +141,8 @@ If you get this issue on mac, try the same but by copying the .dylib file
 
 If you are getting weird errors about some uiohook functions stuff. 
 make sure the compiler can find the uiohook.h from the libuiohook/include folder
-if its just not working, edit the .c file and change this line
-`#include <uiohook.h>` to `#include "uiohook.h"` then copy the uiohook.h file
-from the libuiohook/include folder to the luaohook directory. Recompile with the
-previous commands and it should be fixed.
 
-If you get errors about missing files, or incorrect name, but i don't specificacly mention them, pleacse just try to fix it yourself, its not because i sacid those instructions were right thact there won't be any mistakes here and there.
+If you get errors about missing files, or incorrect name, but i don't specificacly mention them, pleacse just try to fix it yourself, its not because i said those instructions were right that there won't be any mistakes here and there.
+
+**PERMANENT INSTALL**
+if you want to get rid of the libuiohook folder, please copy the uiohook.h file from libuiohook/include/libuiohook to /usr/include on linux and /usr/local/include on macos, good luck on windows, i have no clue i and i don't wanna deal with it, but if you get it working, please let me know.
