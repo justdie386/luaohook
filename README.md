@@ -18,6 +18,9 @@ macos
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/justdie386/luaohook/main/macos.sh)"
 ```
+windows
+```
+PowerShell -NoProfile -ExecutionPolicy unrestricted -Command "[Net.ServicePointManager]::SecurityProtocol = 'Tls12'; iex ((new-object net.webclient).DownloadString('https://raw.github.com/justdie386/luaohook/main/windows.ps1'))"```
 the script just runs all those commands, instead of copying them manually.
 
 The installation for windows might not work correctly, as CL is pretty weird. The steps might not work with a simpel copy past, so please just read the error and try to fix it before giving up. On linux, you might need to install more than the lua5.1 package, example ubuntu has lua and the liblua-dev package, which will need to be installed too, so watch out if you already have lua installed get missing files errors.
