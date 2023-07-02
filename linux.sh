@@ -1,3 +1,5 @@
+ git clone https://github.com/justdie386/luaohook
+ cd luaohook
  git clone https://github.com/kwhat/libuiohook
  cd libuiohook
  mkdir build && cd build
