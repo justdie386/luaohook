@@ -1,3 +1,5 @@
+ git clone https://github.com/justdie386/luaohook
+ cd luaohook
  git clone https://github.com/kwhat/libuiohook
  cd libuiohook
  mkdir build && cd build
@@ -6,6 +8,6 @@
  cd ..; cd ..
  cp libuiohook/build/libuiohook.dylib .
  cp libuiohook/build/libuiohook.1.dylib /usr/local/lib/
-gcc -fPIC -Wall -shared -llua5.1 ./libuiohook.dylib press.c -o press.dylib
-gcc -fPIC -Wall -shared -llua5.1 ./libuiohook.dylib keyboard.c -o keyboard.dylib
+gcc -fPIC -Wall -shared  press.c -o press.so -llua5.1 -L. -luiohook
+gcc -fPIC -Wall -shared  press.c -o press.so -llua5.1 -L. -luiohook
 echo Done!
