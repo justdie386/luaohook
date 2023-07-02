@@ -13,7 +13,8 @@ setx PATH "%CD%;%PATH%"
 copy "libuiohook\dist\lib\uiohook.lib" . /y
 compiling lua
 wget https://raw.githubusercontent.com/Pharap/CompilingLua/master/Compile.bat -P lua-5.1.5
-cd lua-5.1.5 && .\Compile.bat && cd ..
+cd lua-5.1.5 && .\Compile.bat
+cd ..
 gcc keyboard.c -fPIC -Wall -shared -o keyboard.dll ./lua-5.1.5/src/lua.lib ./uiohook.lib
 echo I highly recommend you use the lua.exe file built by this script as it will not have any architecture issues with the modules
 copy "lua5.1.5/src/lua.exe" . /y
