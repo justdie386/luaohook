@@ -1,10 +1,12 @@
  git clone https://github.com/kwhat/libuiohook
  cd libuiohook
- mkdir build && cd build
+ mkdir build
+ cd build
  cmake -S .. -D BUILD_SHARED_LIBS=ON -D BUILD_DEMO=ON -DCMAKE_INSTALL_PREFIX=../dist
  cmake --build . --parallel 2 --target install  
  echo Downloading lua source code
- cd .. && cd ..
+ cd ..
+ cd ..
 wget www.lua.org/ftp/lua-5.1.5.tar.gz
 tar -xf lua-5.1.5.tar.gz
 setx PATH "%CD%;%PATH%"
