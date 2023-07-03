@@ -11,11 +11,7 @@
 static uiohook_event *event = NULL;
 int press_once(lua_State *L){
 	event = (uiohook_event *)malloc(sizeof(uiohook_event));
-	if (lua_tonumber(L, 1) == 1){
-	event->data.mouse.button = MOUSE_BUTTON1;
-	} else{
-	event->data.mouse.button = MOUSE_BUTTON2;
-	}
+	event->data.mouse.button = lua_tonumber(L, 1);
 	event->type = EVENT_MOUSE_PRESSED;
 	event->data.mouse.x = lua_tonumber(L, 2);
 	event->data.mouse.y = lua_tonumber(L, 3);
@@ -26,7 +22,6 @@ int press_once(lua_State *L){
 return 0;
 }
 static int get_monitor_height(lua_State *L) {
-    
     unsigned char count;
     screen_data* monitors = hook_create_screen_info(&count);
     lua_newtable(L);
