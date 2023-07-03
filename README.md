@@ -12,11 +12,11 @@ if you already have the lua headers and dependencies for your platform then skip
 
 linux
 ```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/justdie386/luaohook/main/linux.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/justdie386/luaohook/main/install-script/linux.sh)"
 ```
 macos
 ```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/justdie386/luaohook/main/macos.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/justdie386/luaohook/main/install-script/macos.sh)"
 ```
 For windows, i recommend you use the linux script with mingw, and install the lua dependencies from the mingw pacman repositories to make the whole thing simpler
 
