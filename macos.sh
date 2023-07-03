@@ -10,4 +10,5 @@
  cp libuiohook/build/libuiohook.1.dylib /usr/local/lib/
 gcc -fPIC -Wall -shared  press.c -o press.so -llua5.1 -L. -luiohook
 gcc -fPIC -Wall -shared  press.c -o press.so -llua5.1 -L. -luiohook
+gcc -fPIC -Wall -shared mouse.c -o mouse.so -llua5.1 -L. -luiohook
 echo Done!
