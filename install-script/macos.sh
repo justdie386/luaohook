@@ -8,6 +8,7 @@
  cd ..; cd ..
  cp libuiohook/build/libuiohook.dylib .
  cp libuiohook/build/libuiohook.1.dylib /usr/local/lib/
+ cd src
 gcc -fPIC -Wall -shared  press.c -o press.dylib -llua5.1 -L. -luiohook
 gcc -fPIC -Wall -shared  keyboard.c -o keyboard.dylib -llua5.1 -L. -luiohook
 gcc -fPIC -Wall -shared mouse.c -o mouse.so -llua5.1 -L. -luiohook
