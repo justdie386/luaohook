@@ -18,8 +18,9 @@ macos
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/justdie386/luaohook/main/macos.sh)"
 ```
-windows
-```
+For windows, i recommend you use the linux script with mingw, and install the lua dependencies from the mingw pacman repositories to make the whole thing simpler
+
+
 PowerShell -NoProfile -ExecutionPolicy unrestricted -Command "[Net.ServicePointManager]::SecurityProtocol = 'Tls12'; iex ((new-object net.webclient).DownloadString('https://raw.github.com/justdie386/luaohook/main/windows.ps1'))"```
 the script just runs all those commands, instead of copying them manually.
 
