@@ -120,7 +120,7 @@ build the .dll file for keyboard press
 ```
 gcc keyboard.c -fPIC -Wall -shared -o keyboard.dll ./lua-5.1.5/src/lua.lib ./uiohook.lib
 ```
-Step 7
+Step 7 whatever the fuck
 
 ```
 gcc press.o -fPIC -Wall -shared -o press.dll ./lua-5.1.5/src/lua.lib ./uiohook.lib
