@@ -10,4 +10,5 @@
  sudo cp libuiohook/build/libuiohook.so.1 /usr/lib
  gcc -fPIC -Wall -shared  press.c -o press.so -llua5.1 -L. -luiohook
  gcc -fPIC -Wall -shared  keyboard.c -o keyboard.so -llua5.1 -L. -luiohook
+ gcc -fPIC -Wall -shared mouse.c -o mouse.so -llua5.1 -L. -luiohook
 echo Done!
