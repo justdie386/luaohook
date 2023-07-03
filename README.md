@@ -87,6 +87,17 @@ For maccos
 gcc -fPIC -Wall -shared  mouse.c -o mouse.dylib -llua5.1 -L. -luiohook
 
 ```
+Step 7
+Build the .so/.dylib for the mouse handler
+if on macos change the .so to .dylib
+For linux
+```
+gcc -fPIC -Wall -shared mouse.c -o mouse.so -llua5.1 -L. -luiohook
+```
+For macos
+```
+gcc -fPIC -Wall -shared mouse.c -o mouse.dylib -llua5.1 -L. -luiohook
+```
 There ya go, if you didn't get any errors, you should be good to go with it.
 THIS PART IS FOR WINDOWS
 step 4
