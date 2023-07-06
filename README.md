@@ -18,10 +18,11 @@ macos
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/justdie386/luaohook/main/install-script/macos.sh)"
 ```
-For windows, i recommend you use the linux script with mingw, and install the lua dependencies from the mingw pacman repositories to make the whole thing simpler
+For windows, i recommend you use the linux script with mingw, and install the lua dependencies from the mingw pacman repositories to make the whole thing simpler, akso this install script won't compile just install all the deps needed as i have no clue how to get it to compile once again.
 
-
-PowerShell -NoProfile -ExecutionPolicy unrestricted -Command "[Net.ServicePointManager]::SecurityProtocol = 'Tls12'; iex ((new-object net.webclient).DownloadString('https://raw.github.com/justdie386/luaohook/main/windows.ps1'))"```
+```
+PowerShell -NoProfile -ExecutionPolicy unrestricted -Command "[Net.ServicePointManager]::SecurityProtocol = 'Tls12'; iex ((new-object net.webclient).DownloadString('https://raw.github.com/justdie386/luaohook/main/windows.ps1'))"
+```
 the script just runs all those commands, instead of copying them manually.
 
 The installation for windows might not work correctly, as CL is pretty weird. The steps might not work with a simpel copy past, so please just read the error and try to fix it before giving up. On linux, you might need to install more than the lua5.1 package, example ubuntu has lua and the liblua-dev package, which will need to be installed too, so watch out if you already have lua installed get missing files errors.
