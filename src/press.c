@@ -15,19 +15,16 @@
  */
 
 
-
-#include "libuiohook/include/uiohook.h"
-#include <stdlib.h>
 #ifdef _WIN32
 #include <windows.h>
-#include "lua-5.1.5/src/lauxlib.h"
-#include "lua-5.1.5/src/lua.h"
 #define sleep(x) Sleep(1000 * (x))
 #else
-#include "lua5.1/lauxlib.h"
-#include "lua5.1/lua.h"
 #include <unistd.h>
 #endif
+#include <lauxlib.h>
+#include <lua.h>
+#include <stdlib.h>
+#include <uiohook.h>
 static uiohook_event *event = NULL;
 int keyPressed;
 int kbpress(lua_State *L) {
@@ -75,19 +72,3 @@ int kbreleaseforeverkey(lua_State *L) {
   return 0;
 }
 
-static const struct luaL_Reg luiohook_funcs[] = {
-    {"kbhold", kbhold},
-    {"kbreleaseforeverkey", kbreleaseforeverkey},
-    {"kbholdforever", kbholdforever},
-    {"kbpress", kbpress},
-    {NULL, NULL}};
-
-int luaopen_press(lua_State *L) {
-  lua_pushstring(L, "uiohook_key_pressed");
-  lua_newtable(L);
-  lua_settable(L, LUA_REGISTRYINDEX);
-
-  luaL_register(L, "uiohook", luiohook_funcs);
-
-  return 1;
-}

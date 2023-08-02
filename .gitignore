@@ -1,4 +1,5 @@
-/luarocks
-/lua
 /lua_modules
 /.luarocks
+/.xmake
+/.vscode
+/build
