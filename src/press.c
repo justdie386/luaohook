@@ -26,7 +26,7 @@
 #include <stdlib.h>
 #include <uiohook.h>
 static uiohook_event *event = NULL;
-int keyPressed;
+static int keyPressed;
 int kbpress(lua_State *L) {
   event = (uiohook_event *)malloc(sizeof(uiohook_event));
   luaL_argcheck(L, lua_isnumber(L, 1), 1, "expected number");
