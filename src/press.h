@@ -13,7 +13,7 @@
 #include <stdlib.h>
 #include <uiohook.h>
 
-int keyPressed;
+static int keyPressed;
 int kbpress(lua_State *L);
 int kbhold(lua_State *L);
 int kbholdforever(lua_State *L);

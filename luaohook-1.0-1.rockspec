@@ -12,8 +12,11 @@ build = {
     type = "xmake",
     variables = {
         xmake = {
-            vs_runtime = "MT",
-            arch = "x64",
+            win32 = {
+                vs_runtime = "MT",
+                arch = "x64",
+            },
+
         }
     },
 }

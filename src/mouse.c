@@ -35,27 +35,27 @@ int press_once_hold(lua_State *L){
 	free(event);
 	return 0;
 }
-static int get_sensitivity(lua_State *L){
+int get_sensitivity(lua_State *L){
 	lua_pushinteger(L, hook_get_pointer_sensitivity());
 	return 1;
 }
-static int get_keyboard_repeat_rate(lua_State *L){
+int get_keyboard_repeat_rate(lua_State *L){
 	lua_pushinteger(L, hook_get_auto_repeat_rate());
 	return 1;
 }
-static int get_keyboard_repeat_delay(lua_State *L){
+int get_keyboard_repeat_delay(lua_State *L){
 	lua_pushinteger(L, hook_get_auto_repeat_delay());
 	return 1;
 }
-static int get_acceleration_multiplier(lua_State *L){
+int get_acceleration_multiplier(lua_State *L){
 	lua_pushinteger(L, hook_get_pointer_acceleration_multiplier());
 	return 1;
 }
-static int get_acceleration_threshold(lua_State *L){
+int get_acceleration_threshold(lua_State *L){
 	lua_pushinteger(L, hook_get_pointer_acceleration_threshold());
 	return 1;
 }
-static int get_monitor_height(lua_State *L) {
+int get_monitor_height(lua_State *L) {
     unsigned char count;
     screen_data* monitors = hook_create_screen_info(&count);
     lua_newtable(L);
@@ -64,7 +64,7 @@ static int get_monitor_height(lua_State *L) {
     }
     return 1;
 }
-static int get_monitor_width(lua_State *L){
+int get_monitor_width(lua_State *L){
 	unsigned char count;
 	screen_data* monitors = hook_create_screen_info(&count);
 	for (int i=0; i < count; i++){

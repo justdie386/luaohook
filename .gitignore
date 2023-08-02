@@ -3,3 +3,8 @@
 /.xmake
 /.vscode
 /build
+/lua
+/luarocks
+/compile_commands.json
+/output
+/.cache
