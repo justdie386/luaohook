@@ -17,7 +17,7 @@
 #include <lauxlib.h>
 #include <lua.h>
 #include <uiohook.h>
-#include "keyboard.h"
+#include "event.h"
 static lua_State *luiohook_state;
 
 void luiohook_on_event(uiohook_event *const event) {

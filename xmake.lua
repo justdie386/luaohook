@@ -1,4 +1,3 @@
---bro thanks frityet you are a real one for this
 package("libuiohook")
     set_homepage("https://github.com/kwhat/libuiohook")
     set_description("A multi-platform C library to provide global keyboard and mouse hooks from userland.")
@@ -6,7 +5,7 @@ package("libuiohook")
     add_urls("https://github.com/kwhat/libuiohook.git")
     add_versions("1.2.2", "23acecfe207f8a8b5161bec97a8a6fd6ad0aea88")
 
-    add_deps("cmake", "libxcb", "libx11", "libxkbcommon")
+    add_deps("cmake", "libxcb", "libx11", "libxkbcommon", "libxtst")
 
     on_install(function (package)
         local configs = {}
@@ -35,6 +34,5 @@ target("luaohook")
     add_packages("libuiohook", "lua")
     else
     add_packages("libuiohook", "libxkbcommon", "libxcb", "libx11")
-    add_links("xkbcommon", "xcb")
+    add_links("xkbcommon", "xcb", "Xinerama", "X11", "Xt", "xkbcommon-x11")
     end
-

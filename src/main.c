@@ -1,4 +1,4 @@
-#include "keyboard.h"
+#include "event.h"
 #include "mouse.h"
 #include "press.h"
 #include <lauxlib.h>
@@ -12,7 +12,7 @@ static const struct luaL_Reg luiohook_funcs1[] = {
     {NULL, NULL}
 };
 
-int luaopen_luaohook_keyboard(lua_State *L) {
+int luaopen_luaohook_event(lua_State *L) {
     lua_pushstring(L, "uiohook_key_pressed");
     lua_newtable(L);
     lua_settable(L, LUA_REGISTRYINDEX);
@@ -53,7 +53,7 @@ int luaopen_luaohook(lua_State *L) {
     lua_newtable(L);
     luaopen_luaohook_mouse(L);
     lua_setfield(L, -2, "mouse");
-    luaopen_luaohook_keyboard(L);
+    luaopen_luaohook_event(L);
     lua_setfield(L, -2, "keyboard");
     luaopen_luaohook_press(L);
     lua_setfield(L, -2, "press");
