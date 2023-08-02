@@ -17,7 +17,6 @@ build = {
                 vs_runtime = "MT",
                 arch = "x64",
             },
-
         }
     },
 }

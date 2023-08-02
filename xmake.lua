@@ -4,9 +4,11 @@ package("libuiohook")
 
     add_urls("https://github.com/kwhat/libuiohook.git")
     add_versions("1.2.2", "23acecfe207f8a8b5161bec97a8a6fd6ad0aea88")
-
+    if is_plat("windows") then
+    add_deps("cmake")
+    else
     add_deps("cmake", "libxcb", "libx11", "libxkbcommon", "libxtst")
-
+    end
     on_install(function (package)
         local configs = {}
         table.insert(configs, "-DCMAKE_BUILD_TYPE=" .. (package:is_debug() and "Debug" or "Release"))

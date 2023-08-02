@@ -1,7 +1,7 @@
 package.cpath = "./?.so"
 
 local mouse = require "luaohook.press"
-local keyboard = require "luaohook.keyboard"
+local event = require "luaohook.event"
 
 local isbool = math.random(1, 2)
 local bool
