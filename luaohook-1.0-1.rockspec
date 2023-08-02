@@ -13,7 +13,7 @@ build = {
     variables = {
         xmake = {
             vs_runtime = "MT",
-            arch = "x86",
+            arch = "x64",
         }
     },
 }
