@@ -1,2 +1,3 @@
-local g = require("luaohook")
+package.cpath = "./?.so"
 
+require"luaohook.mouse"

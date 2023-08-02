@@ -6,7 +6,7 @@ package("libuiohook")
     add_urls("https://github.com/kwhat/libuiohook.git")
     add_versions("1.2.2", "23acecfe207f8a8b5161bec97a8a6fd6ad0aea88")
 
-    add_deps("cmake", "libxcb", "libx11")
+    add_deps("cmake", "libxcb", "libx11", "libxkbcommon")
 
     on_install(function (package)
         local configs = {}
@@ -17,7 +17,11 @@ package("libuiohook")
 package_end()
 
 add_rules("mode.debug", "mode.release")
+if is_plat("windows") then
 add_requires("libuiohook", "lua 5.1.5")
+else
+add_requires("libuiohook")
+end
 target("luaohook")
     add_rules("luarocks.module")
     add_files("src/*.c")
@@ -27,5 +31,10 @@ target("luaohook")
     elseif is_plat("macosx") then
         add_frameworks("CoreFoundation", "Foundation", "Cocoa")
     end
+    if is_plat("windows") then
     add_packages("libuiohook", "lua")
+    else
+    add_packages("libuiohook", "libxkbcommon", "libxcb", "libx11")
+    add_links("xkbcommon", "xcb")
+    end
 
