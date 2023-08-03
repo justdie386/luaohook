@@ -28,13 +28,12 @@ target("luaohook.luaohook")
     add_files("src/*.c")
     add_headerfiles("src/*.h")
     if is_plat("windows") then
+        add_packages("libuiohook", "lua")
         add_links("user32", "kernel32", "gdi32", "advapi32")
     elseif is_plat("macosx") then
+        add_packages("libuiohook")
         add_frameworks("CoreFoundation", "Foundation", "Cocoa")
-    end
-    if is_plat("windows") then
-    add_packages("libuiohook", "lua")
-    else
-    add_packages("libuiohook", "libxkbcommon", "libxcb", "libx11")
-    add_links("xkbcommon", "xcb", "Xinerama", "X11", "Xt", "xkbcommon-x11")
+    else 
+        add_links("xkbcommon", "xcb", "Xinerama", "X11", "Xt", "xkbcommon-x11")
+        add_packages("libuiohook", "libxkbcommon", "libxcb", "libx11")
     end
