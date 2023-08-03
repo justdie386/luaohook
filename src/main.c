@@ -1,6 +1,6 @@
 #include "event.h"
 #include "mouse.h"
-#include "press.h"
+#include "keyboard.h"
 #include <lauxlib.h>
 #include <lua.h>
 #include <lualib.h>
@@ -11,14 +11,6 @@ static const struct luaL_Reg luiohook_funcs1[] = {
     {"unregister", luiohook_unregister},
     {NULL, NULL}
 };
-
-int luaopen_luaohook_event(lua_State *L) {
-    lua_pushstring(L, "uiohook_key_pressed");
-    lua_newtable(L);
-    lua_settable(L, LUA_REGISTRYINDEX);
-    luaL_newlib(L, luiohook_funcs1);
-    return 1;
-}
 
 static const struct luaL_Reg luiohook_funcs2[] = {
     {"press_once", press_once},
@@ -32,11 +24,6 @@ static const struct luaL_Reg luiohook_funcs2[] = {
     {NULL, NULL}
 };
 
-int luaopen_luaohook_mouse(lua_State *L) {
-    luaL_newlib(L, luiohook_funcs2);
-    return 1;
-}
-
 static const struct luaL_Reg luiohook_funcs3[] = {
     {"kbhold", kbhold},
     {"kbreleaseforeverkey", kbreleaseforeverkey},
@@ -45,18 +32,54 @@ static const struct luaL_Reg luiohook_funcs3[] = {
     {NULL, NULL}
 };
 
-int luaopen_luaohook_press(lua_State *L) {
-    luaL_newlib(L, luiohook_funcs3);
+
+int luaopen_luaohook_event(lua_State *L) {
+    luaL_newmetatable(L, "luaohook.event");
+    lua_pushvalue(L, -1);
+    lua_setfield(L, -1, "__index");
+    luaL_setfuncs(L, luiohook_funcs1, 0);
     return 1;
 }
-int luaopen_luaohook(lua_State *L) {
-    lua_newtable(L);
-    luaopen_luaohook_mouse(L);
-    lua_setfield(L, -2, "mouse");
-    luaopen_luaohook_event(L);
-    lua_setfield(L, -2, "keyboard");
-    luaopen_luaohook_press(L);
-    lua_setfield(L, -2, "press");
+
+
+int luaopen_luaohook_mouse(lua_State *L) {
+    luaL_newmetatable(L, "luaohook.mouse");
+    lua_pushvalue(L, -1);
+    lua_setfield(L, -1, "__index");
+    luaL_setfuncs(L, luiohook_funcs2, 0);
+    return 1;
+}
+
+
+
+int luaopen_luaohook_press(lua_State *L) {
+    luaL_newmetatable(L, "luaohook.press");
+    lua_pushvalue(L, -1);
+    lua_setfield(L, -1, "__index");
+    luaL_setfuncs(L, luiohook_funcs3, 0);
+    return 1;
+}
+
+int credit (lua_State *L){
+    printf("Written by justdie, thanks to nameless (his actual name) for doing the event.c file, and thanks to frityet for the overall help and for the xmake file \n");
+    return 0;
+}
+static const luaL_Reg actor_methods[] = {
+    {"credit", credit},
+    { NULL, NULL }
+};
+int 
+luaopen_luaohook (lua_State * L)
+{
+    /* create metatable */
+    luaL_newmetatable(L, "luaohook");
+
+    /* metatable.__index = metatable */
+    lua_pushvalue(L, -1);
+    lua_setfield(L, -1, "__index");
+
+    /* register methods */
+    luaL_setfuncs(L, actor_methods, 0);
 
     return 1;
 }

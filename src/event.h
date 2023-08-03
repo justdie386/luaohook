@@ -1,5 +1,5 @@
-#ifndef KEYBOARD_H_  /* Include guard */
-#define KEYBOARD_H_
+#ifndef EVENT_H_
+#define EVENT_H_
 
 #include <lauxlib.h>
 #include <lua.h>

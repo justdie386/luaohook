@@ -25,6 +25,8 @@
 #include <lua.h>
 #include <stdlib.h>
 #include <uiohook.h>
+#include "keyboard.h"
+
 static uiohook_event *event = NULL;
 static int keyPressed;
 int kbpress(lua_State *L) {

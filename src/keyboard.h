@@ -1,5 +1,5 @@
-#ifndef PRESS_H_
-#define PRESS_H_
+#ifndef KEYBOARD_H_
+#define KEYBOARD_H_
 
 #ifdef _WIN32
 #include <windows.h>
@@ -20,4 +20,4 @@ int kbholdforever(lua_State *L);
 int kbreleaseforeverkey(lua_State *L);
 int luaopen_luaohook_press(lua_State *L);
 
-#endif /* PRESS_H_ */
+#endif /* KEYBOARD_H_ */

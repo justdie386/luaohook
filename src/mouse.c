@@ -59,16 +59,12 @@ int get_monitor_height(lua_State *L) {
     unsigned char count;
     screen_data* monitors = hook_create_screen_info(&count);
     lua_newtable(L);
-    for (int i = 0; i < count; i++) {
-	lua_pushinteger(L, monitors[i].height);
-    }
+	lua_pushinteger(L, monitors->height);
     return 1;
 }
 int get_monitor_width(lua_State *L){
 	unsigned char count;
 	screen_data* monitors = hook_create_screen_info(&count);
-	for (int i=0; i < count; i++){
-	lua_pushinteger(L, monitors[i].width);
-	}
+	lua_pushinteger(L, monitors->width);
 	return 1;
 }

@@ -23,7 +23,7 @@ add_requires("libuiohook", "lua 5.1.5")
 else
 add_requires("libuiohook")
 end
-target("luaohook")
+target("luaohook.luaohook")
     add_rules("luarocks.module")
     add_files("src/*.c")
     add_headerfiles("src/*.h")

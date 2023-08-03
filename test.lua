@@ -1,17 +1,9 @@
 package.cpath = "./?.so"
-
 local mouse = require "luaohook.press"
-local event = require "luaohook.event"
-
-local isbool = math.random(1, 2)
-local bool
-if isbool == 1 then
-    bool = true
-else
-    bool = false
-end
-if bool == true then
-    print("its true!")
-else
-    print("its false!")
-end
+local test = require "luaohook"
+local screen = require "luaohook.mouse"
+local monitor_width = screen.get_width()
+local monitor_height = screen.get_height()
+print(monitor_height)
+print(monitor_width)
+test.credit()
