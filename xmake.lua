@@ -17,25 +17,54 @@ package("libuiohook")
     end)
 package_end()
 
+local windows_packages = {"luajit", "libuiohook"}
+local windows_linker = {"user32", "kernel32", "gdi32", "advapi32"}
+local macos_frameworks = {"CoreFoundation", "Foundation", "Cocoa"}
+local macos_packages = {"libuiohook"}
+local linux_packages = {"libuiohook", "libxkbcommon", "libxcb", "libx11"}
+local linux_linkers = {"xkbcommon", "xcb", "Xinerama", "X11", "Xt", "xkbcommon-x11"}
 add_rules("mode.debug", "mode.release")
 if is_plat("windows") then
-add_requires("libuiohook", "luajit")
+add_requires(windows_packages)
 else
 add_requires("libuiohook")
 end
-target("luaohook")
+target("luaohook.keyboard")
     add_rules("luarocks.module")
-    add_files("src/*.c")
-    add_headerfiles("src/*.h")
+    add_files("src/keyboard.c")
     if is_plat("windows") then
-        add_packages("libuiohook", "luajit")
-        add_links("user32", "kernel32", "gdi32", "advapi32")
+        add_packages(windows_packages)
+        add_links(windows_linker)
     elseif is_plat("macosx") then
-        add_packages("libuiohook", "luajit")
-        add_frameworks("CoreFoundation", "Foundation", "Cocoa")
+        add_packages(macos_packages)
+        add_frameworks(macos_frameworks)
     elseif is_plat("linux") then
-        add_links("xkbcommon", "xcb", "Xinerama", "X11", "Xt", "xkbcommon-x11")
-        add_packages("libuiohook", "libxkbcommon", "libxcb", "libx11", "luajit")
+        add_links(linux_linkers)
+        add_packages(linux_packages)
     end
-        add_packages("libuiohook")
-        add_links("user32", "kernel32", "gdi32", "advapi32")
+target("luaohook.event")
+    add_rules("luarocks.module")
+    add_files("src/event.c")
+    if is_plat("windows") then
+        add_packages(windows_packages)
+        add_links(windows_linker)
+    elseif is_plat("macosx") then
+        add_packages(macos_packages)
+        add_frameworks(macos_frameworks)
+    elseif is_plat("linux") then
+        add_links(linux_linkers)
+        add_packages(linux_packages)
+    end
+target("luaohook.mouse")
+    add_rules("luarocks.module")
+    add_files("src/mouse.c")
+    if is_plat("windows") then
+        add_packages(windows_packages)
+        add_links(windows_linker)
+    elseif is_plat("macosx") then
+        add_packages(macos_packages)
+        add_frameworks(macos_frameworks)
+    elseif is_plat("linux") then
+        add_links(linux_linkers)
+        add_packages(linux_packages)
+    end

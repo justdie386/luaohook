@@ -68,3 +68,19 @@ int get_monitor_width(lua_State *L){
 	lua_pushinteger(L, monitors->width);
 	return 1;
 }
+static const struct luaL_Reg luiohook_funcs2[] = {
+    {"press_once", press_once},
+    {"get_width", get_monitor_width},
+    {"get_height", get_monitor_height},
+    {"get_mouse_acceleration_multiplier", get_acceleration_multiplier},
+    {"get_mouse_acceleration_threshold", get_acceleration_threshold},
+    {"get_keyboard_repeat_delay", get_keyboard_repeat_delay},
+    {"get_mouse_sensitivity", get_sensitivity},
+    {"get_keyboard_repeat_rate", get_keyboard_repeat_rate},
+    {NULL, NULL}
+};
+
+
+int luaopen_luaohook_mouse(lua_State *L){
+	luaL_newlib(L,luiohook_funcs2);
+}

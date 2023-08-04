@@ -1,5 +1,5 @@
 package.cpath = "./?.dll"
-keyboard = require"luaohook"
+keyboard = require"luaohook.event"
 mouse = require"luaohook.mouse"
 
 

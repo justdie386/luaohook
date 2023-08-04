@@ -1,0 +1,10 @@
+{
+    ["detect.sdks.find_vcpkgdir"] = "C:/Users/justi/vcpkg",
+    find_program = {
+        ["pkg-config"] = false,
+        pkgconf = false
+    },
+    find_package_windows_x64 = {
+        lua_release = false
+    }
+}

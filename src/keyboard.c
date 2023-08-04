@@ -25,7 +25,6 @@
 #include <lua.h>
 #include <stdlib.h>
 #include <uiohook.h>
-#include "keyboard.h"
 
 static uiohook_event *event = NULL;
 static int keyPressed;
@@ -74,3 +73,15 @@ int kbreleaseforeverkey(lua_State *L) {
   return 0;
 }
 
+static const struct luaL_Reg luiohook_funcs3[] = {
+    {"kbhold", kbhold},
+    {"kbreleaseforeverkey", kbreleaseforeverkey},
+    {"kbholdforever", kbholdforever},
+    {"kbpress", kbpress},
+    {NULL, NULL}
+};
+
+ int luaopen_luaohook_keyboard(lua_State *L) {
+    luaL_newlib(L, luiohook_funcs3);
+    return 1;
+}

@@ -1,5 +1,5 @@
 package.cpath = "./?.dll"
-local monitor = require("mouse")
+local monitor = require("luaohook.mouse")
 package.path = "./?.lua"
 local mouse = require("enums")
 local monitor_width = monitor.get_width()

@@ -17,7 +17,7 @@
 #include <lauxlib.h>
 #include <lua.h>
 #include <uiohook.h>
-#include "event.h"
+
 static lua_State *luiohook_state;
 
 void luiohook_on_event(uiohook_event *const event) {
@@ -112,4 +112,19 @@ int luiohook_run(lua_State *L) {
   hook_set_dispatch_proc(&luiohook_on_event);
   hook_run();
   return 0;
+}
+
+static const struct luaL_Reg luiohook_funcs1[] = {
+    {"run", luiohook_run},
+    {"register", luiohook_register},
+    {"unregister", luiohook_unregister},
+    {NULL, NULL}
+};
+
+ int luaopen_luaohook_event(lua_State *L) {
+    lua_pushstring(L, "uiohook_key_pressed");
+    lua_newtable(L);
+    lua_settable(L, LUA_REGISTRYINDEX);
+    luaL_newlib(L, luiohook_funcs1);
+    return 1;
 }

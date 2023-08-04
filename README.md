@@ -4,6 +4,8 @@ Thanks to kwat for making https://github.com/kwhat/libuiohook (Credit i guess)
 
 luaohook is a fully cross platform global keyboard and mouse(just implemented that one! )hooks for lua, built around libuiohook, a C cross platform keyboard and mouse global hook library.
 
+For now i do not recommend using the mouse module because some features could be missing depending on your needs
+
 **INSTALLATION**
 
 The installation is done using xmake, please install it from xmake.io before doing anything
@@ -15,16 +17,20 @@ luarocks install luaohook
 
 ```lua
 
-package.cpath = "./?.so" --or .dll for windows
+local keyboard = require"luaohook.keyoard"
+local mouse = require"luaohook.mouse"
+local event = require"luaohook.event"
+local monitor_width = monitor.get_width()
+local monitor_height = monitor.get_height()
+for i=1,5 do
 
-local press = require"press"
-local keyboard = require"keyboard"
-keyboard.register(0x001E, function()
+end
+event.register(0x001E, function()
 print("nice")
-press.kbpress(0x002E)
+keyboard.kbpress(0x002E)
 end)
 
-keyboard.run()
+event.run()
 ```
 
 The keys are mapped here

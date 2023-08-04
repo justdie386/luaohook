@@ -2,10 +2,20 @@ package = "luaohook"
 version = "1.0-1"
 source = {
     url = "https://github.com/justdie386/luaohook",
-    tag = "a cross platform global keyboard hook, that allows to write hotkeys, mouse the mouse, and get other informations about things such as the monitor's width. This library is cross platform, but will not work on wayland, other than that, windows, macos and X11 is supported (freebsd and other bsd based os haven't been tested but they should work as long as the desktop is running X11 to compile it on a BSD platform you'll most likely have to change some parts of the config file to include BSD with the other unix systems)",
+    tag = "keyboard",
+
+}
+description = {
+    summary = "a cross platform global keyboard hook",
+    detailed  = [[
+        This library requires luajit to be installed. This is a cross platform library that allows you to make hotkeys, interact with the mouse
+        and keyboard, but globaly, not just when focusing a certain window, works on X11, windows and macos. Thanks to the libuiohook project which
+        i built this library around. The keys are mapped here: https://github.com/kwhat/libuiohook/blob/1.2/include/uiohook.h#L134-L403. if luarocks failed
+        to build the library on your platform, please open an issue so that i could look into it here https://github.com/justdie386/luaohook/issues
+    ]]
 }
 dependencies = {
-    "lua >= 5.1",
+    "lua = 5.1",
     "luarocks-build-xmake"
 }
 build = {
