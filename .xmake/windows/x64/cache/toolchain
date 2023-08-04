@@ -1,0 +1,62 @@
+{
+    ["tool_target_luaohook.keyboard_windows_x64_cc"] = {
+        program = "cl.exe",
+        toolchain_info = {
+            plat = "windows",
+            name = "msvc",
+            cachekey = "msvc_arch_x64_plat_windows",
+            arch = "x64"
+        },
+        toolname = "cl"
+    },
+    ["tool_target_luaohook.mouse_windows_x64_cc"] = {
+        program = "cl.exe",
+        toolchain_info = {
+            plat = "windows",
+            name = "msvc",
+            cachekey = "msvc_arch_x64_plat_windows",
+            arch = "x64"
+        },
+        toolname = "cl"
+    },
+    ["tool_target_luaohook.mouse_windows_x64_sh"] = {
+        program = "link.exe",
+        toolchain_info = {
+            plat = "windows",
+            name = "msvc",
+            cachekey = "msvc_arch_x64_plat_windows",
+            arch = "x64"
+        },
+        toolname = "link"
+    },
+    ["tool_target_luaohook.event_windows_x64_cc"] = {
+        program = "cl.exe",
+        toolchain_info = {
+            plat = "windows",
+            name = "msvc",
+            cachekey = "msvc_arch_x64_plat_windows",
+            arch = "x64"
+        },
+        toolname = "cl"
+    },
+    ["tool_target_luaohook.event_windows_x64_sh"] = {
+        program = "link.exe",
+        toolchain_info = {
+            plat = "windows",
+            name = "msvc",
+            cachekey = "msvc_arch_x64_plat_windows",
+            arch = "x64"
+        },
+        toolname = "link"
+    },
+    ["tool_target_luaohook.keyboard_windows_x64_sh"] = {
+        program = "link.exe",
+        toolchain_info = {
+            plat = "windows",
+            name = "msvc",
+            cachekey = "msvc_arch_x64_plat_windows",
+            arch = "x64"
+        },
+        toolname = "link"
+    }
+}
