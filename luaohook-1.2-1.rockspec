@@ -1,9 +1,8 @@
 package = "luaohook"
-version = "1.1-1"
+version = "1.2-1"
 source = {
     url = "git://github.com/justdie386/luaohook",
     tag = "main",
-
 }
 description = {
     summary = "a cross platform global keyboard hook",
