@@ -33,7 +33,7 @@ static const struct luaL_Reg luiohook_funcs3[] = {
 };
 
 
-int luaopen_luaohook_event(lua_State *L) {
+ int luaopen_luaohook_event(lua_State *L) {
     luaL_newmetatable(L, "luaohook.event");
     lua_pushvalue(L, -1);
     lua_setfield(L, -1, "__index");
@@ -52,7 +52,7 @@ int luaopen_luaohook_mouse(lua_State *L) {
 
 
 
-int luaopen_luaohook_press(lua_State *L) {
+ int luaopen_luaohook_press(lua_State *L) {
     luaL_newmetatable(L, "luaohook.press");
     lua_pushvalue(L, -1);
     lua_setfield(L, -1, "__index");
@@ -68,17 +68,12 @@ static const luaL_Reg actor_methods[] = {
     {"credit", credit},
     { NULL, NULL }
 };
-int 
-luaopen_luaohook (lua_State * L)
+ __declspec(dllexport) int 
+ luaopen_luaohook(lua_State * L)
 {
-    /* create metatable */
     luaL_newmetatable(L, "luaohook");
-
-    /* metatable.__index = metatable */
     lua_pushvalue(L, -1);
     lua_setfield(L, -1, "__index");
-
-    /* register methods */
     luaL_setfuncs(L, actor_methods, 0);
 
     return 1;

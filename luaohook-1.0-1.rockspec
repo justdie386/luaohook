@@ -12,7 +12,6 @@ build = {
     type = "xmake",
     variables = {
         xmake = {
-            copy_directories = {},
             win32 = {
                 vs_runtime = "MT",
                 arch = "x64",

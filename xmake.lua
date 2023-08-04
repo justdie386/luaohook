@@ -19,21 +19,23 @@ package_end()
 
 add_rules("mode.debug", "mode.release")
 if is_plat("windows") then
-add_requires("libuiohook", "lua 5.1.5")
+add_requires("libuiohook", "luajit")
 else
 add_requires("libuiohook")
 end
-target("luaohook.luaohook")
+target("luaohook")
     add_rules("luarocks.module")
     add_files("src/*.c")
     add_headerfiles("src/*.h")
     if is_plat("windows") then
-        add_packages("libuiohook", "lua")
+        add_packages("libuiohook", "luajit")
         add_links("user32", "kernel32", "gdi32", "advapi32")
     elseif is_plat("macosx") then
-        add_packages("libuiohook")
+        add_packages("libuiohook", "luajit")
         add_frameworks("CoreFoundation", "Foundation", "Cocoa")
-    else 
+    elseif is_plat("linux") then
         add_links("xkbcommon", "xcb", "Xinerama", "X11", "Xt", "xkbcommon-x11")
-        add_packages("libuiohook", "libxkbcommon", "libxcb", "libx11")
+        add_packages("libuiohook", "libxkbcommon", "libxcb", "libx11", "luajit")
     end
+        add_packages("libuiohook")
+        add_links("user32", "kernel32", "gdi32", "advapi32")
