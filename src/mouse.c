@@ -18,8 +18,6 @@ int press_once(lua_State *L) {
     event->data.mouse.x = lua_tonumber(L, 2);
     event->data.mouse.y = lua_tonumber(L, 3);
     hook_post_event(event);
-
-    // Free the event after use
     free(event);
     return 0;
 }
@@ -32,18 +30,15 @@ int press_once_hold(lua_State *L) {
     event->data.mouse.x = lua_tonumber(L, 2);
     event->data.mouse.y = lua_tonumber(L, 3);
     hook_post_event(event);
-
-    // Free the event after use
     free(event);
     return 0;
 }
 
-int release_key(lua_State *L) {
+int release_mouse(lua_State *L) {
     event = (uiohook_event *)malloc(sizeof(uiohook_event));
     event->type = EVENT_MOUSE_RELEASED;
+	event->data.mouse.button = lua_tonumber(L, 1);
     hook_post_event(event);
-
-    // Free the event after use
     free(event);
     return 0;
 }
@@ -83,6 +78,8 @@ int get_monitor_width(lua_State *L){
 }
 static const struct luaL_Reg luiohook_funcs2[] = {
     {"press_once", press_once},
+	{"press_once_hold", press_once_hold},
+	{"release_mouse", release_mouse},
     {"get_width", get_monitor_width},
     {"get_height", get_monitor_height},
     {"get_mouse_acceleration_multiplier", get_acceleration_multiplier},

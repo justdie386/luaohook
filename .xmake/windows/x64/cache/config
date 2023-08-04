@@ -1,11 +1,11 @@
 {
+    recheck = false,
+    options = {
+        linkdirs = [[C:\lua\luajit/bin]],
+        syslinks = "lua51",
+        includedirs = [[C:\lua\luajit/include]]
+    },
     mtimes = {
         ["xmake.lua"] = 1691176103
-    },
-    options = {
-        includedirs = [[C:\lua\luajit/include]],
-        linkdirs = [[C:\lua\luajit/bin]],
-        syslinks = "lua51"
-    },
-    recheck = false
+    }
 }

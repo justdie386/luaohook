@@ -1,5 +1,5 @@
 package = "luaohook"
-version = "1.2-1"
+version = "1.3-1"
 source = {
     url = "git://github.com/justdie386/luaohook",
     tag = "main",
