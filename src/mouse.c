@@ -7,11 +7,9 @@
 #include <lauxlib.h>
 #include <lua.h>
 #include <uiohook.h>
-#include <stdio.h>
 static uiohook_event *event = NULL;
 
 int press_once(lua_State *L) {
-    printf("wtf? \n");
     event = (uiohook_event *)malloc(sizeof(uiohook_event));
     event->data.mouse.button = lua_tonumber(L, 1);
     event->type = EVENT_MOUSE_PRESSED;
@@ -23,7 +21,6 @@ int press_once(lua_State *L) {
 }
 
 int press_once_hold(lua_State *L) {
-    printf("ayo? \n");
     event = (uiohook_event *)malloc(sizeof(uiohook_event));
     event->data.mouse.button = lua_tonumber(L, 1);
     event->type = EVENT_MOUSE_PRESSED;
@@ -92,7 +89,6 @@ static const struct luaL_Reg luiohook_funcs2[] = {
 
 
 int luaopen_luaohook_mouse(lua_State *L){
-	printf("testing? \n");
 	luaL_newlib(L,luiohook_funcs2);
 	return 1;
 }

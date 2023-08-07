@@ -55,16 +55,16 @@ target("luaohook.event")
         add_links(linux_linkers)
         add_packages(linux_packages)
     end
---target("luaohook.mouse")
- --   add_rules("luarocks.module")
- --   add_files("src/mouse.c")
- --   if is_plat("windows") then
- --       add_packages(windows_packages)
- --       add_links(windows_linker)
- --   elseif is_plat("macosx") then
- --       add_packages(macos_packages)
- --       add_frameworks(macos_frameworks)
- --   elseif is_plat("linux") then
- --       add_links(linux_linkers)
- --       add_packages(linux_packages)
- --   end
+target("luaohook.mouse")
+   add_rules("luarocks.module")
+   add_files("src/mouse.c")
+   if is_plat("windows") then
+       add_packages(windows_packages)
+        add_links(windows_linker)
+    elseif is_plat("macosx") then
+        add_packages(macos_packages)
+        add_frameworks(macos_frameworks)
+    elseif is_plat("linux") then
+        add_links(linux_linkers)
+        add_packages(linux_packages)
+   end

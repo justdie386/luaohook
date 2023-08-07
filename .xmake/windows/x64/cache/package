@@ -1,36 +1,36 @@
 {
-    luajit = {
-        libfiles = [[C:\Users\justi\AppData\Local\.xmake\packages\l\luajit\2.1.0-beta3\13e6f4a6b257413e98184c57fe7c168b\lib\luajit.lib]],
-        links = "luajit",
-        static = true,
-        __requirestr = "luajit",
-        sysincludedirs = [[C:\Users\justi\AppData\Local\.xmake\packages\l\luajit\2.1.0-beta3\13e6f4a6b257413e98184c57fe7c168b\include\luajit]],
-        linkdirs = [[C:\Users\justi\AppData\Local\.xmake\packages\l\luajit\2.1.0-beta3\13e6f4a6b257413e98184c57fe7c168b\lib]],
-        envs = {
-            PATH = {
-                [[C:\Users\justi\AppData\Local\.xmake\packages\l\luajit\2.1.0-beta3\13e6f4a6b257413e98184c57fe7c168b\bin]],
-                [[C:\Users\justi\AppData\Local\.xmake\packages\l\luajit\2.1.0-beta3\13e6f4a6b257413e98184c57fe7c168b\bin]]
-            }
-        },
-        version = "2.1.0-beta3",
-        installdir = [[C:\Users\justi\AppData\Local\.xmake\packages\l\luajit\2.1.0-beta3\13e6f4a6b257413e98184c57fe7c168b]],
-        __enabled = true
-    },
     libuiohook = {
-        libfiles = [[C:\Users\justi\AppData\Local\.xmake\packages\l\libuiohook\1.2.2\cafd076020034bb5bf8455b8c8407c4a\lib\uiohook.lib]],
-        links = "uiohook",
-        static = true,
-        __requirestr = "libuiohook",
-        sysincludedirs = [[C:\Users\justi\AppData\Local\.xmake\packages\l\libuiohook\1.2.2\cafd076020034bb5bf8455b8c8407c4a\include]],
+        version = "1.2.2",
         linkdirs = [[C:\Users\justi\AppData\Local\.xmake\packages\l\libuiohook\1.2.2\cafd076020034bb5bf8455b8c8407c4a\lib]],
+        sysincludedirs = [[C:\Users\justi\AppData\Local\.xmake\packages\l\libuiohook\1.2.2\cafd076020034bb5bf8455b8c8407c4a\include]],
         envs = {
             PATH = {
                 [[C:\Users\justi\AppData\Local\.xmake\packages\l\libuiohook\1.2.2\cafd076020034bb5bf8455b8c8407c4a\bin]],
                 [[C:\Users\justi\AppData\Local\.xmake\packages\c\cmake\3.26.4\4d23fc87455a4a1c819e093bd8456f0f\bin]]
             }
         },
-        version = "1.2.2",
+        __enabled = true,
+        links = "uiohook",
+        libfiles = [[C:\Users\justi\AppData\Local\.xmake\packages\l\libuiohook\1.2.2\cafd076020034bb5bf8455b8c8407c4a\lib\uiohook.lib]],
         installdir = [[C:\Users\justi\AppData\Local\.xmake\packages\l\libuiohook\1.2.2\cafd076020034bb5bf8455b8c8407c4a]],
-        __enabled = true
+        static = true,
+        __requirestr = "libuiohook"
+    },
+    luajit = {
+        version = "2.1.0-beta3",
+        linkdirs = [[C:\Users\justi\AppData\Local\.xmake\packages\l\luajit\2.1.0-beta3\13e6f4a6b257413e98184c57fe7c168b\lib]],
+        sysincludedirs = [[C:\Users\justi\AppData\Local\.xmake\packages\l\luajit\2.1.0-beta3\13e6f4a6b257413e98184c57fe7c168b\include\luajit]],
+        envs = {
+            PATH = {
+                [[C:\Users\justi\AppData\Local\.xmake\packages\l\luajit\2.1.0-beta3\13e6f4a6b257413e98184c57fe7c168b\bin]],
+                [[C:\Users\justi\AppData\Local\.xmake\packages\l\luajit\2.1.0-beta3\13e6f4a6b257413e98184c57fe7c168b\bin]]
+            }
+        },
+        __enabled = true,
+        links = "luajit",
+        libfiles = [[C:\Users\justi\AppData\Local\.xmake\packages\l\luajit\2.1.0-beta3\13e6f4a6b257413e98184c57fe7c168b\lib\luajit.lib]],
+        installdir = [[C:\Users\justi\AppData\Local\.xmake\packages\l\luajit\2.1.0-beta3\13e6f4a6b257413e98184c57fe7c168b]],
+        static = true,
+        __requirestr = "luajit"
     }
 }

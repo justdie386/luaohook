@@ -1,132 +1,122 @@
 {
-    ["tool_target_luaohook.event_windows_x64_cxx"] = {
-        program = [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\bin\HostX64\x64\cl.exe]],
-        toolchain_info = {
-            cachekey = "msvc_arch_x64_plat_windows",
-            name = "msvc",
-            plat = "windows",
-            arch = "x64"
-        },
-        toolname = "cl"
-    },
-    ["tool_target_luaohook.mouse_windows_x64_cxx"] = {
-        program = [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\bin\HostX64\x64\cl.exe]],
-        toolchain_info = {
-            cachekey = "msvc_arch_x64_plat_windows",
-            name = "msvc",
-            plat = "windows",
-            arch = "x64"
-        },
-        toolname = "cl"
-    },
-    ["tool_target_luaohook.event_windows_x64_sh"] = {
-        program = [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\bin\HostX64\x64\link.exe]],
-        toolchain_info = {
-            cachekey = "msvc_arch_x64_plat_windows",
-            name = "msvc",
-            plat = "windows",
-            arch = "x64"
-        },
-        toolname = "link"
-    },
-    ["tool_target_luaohook.mouse_windows_x64_cc"] = {
-        program = [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\bin\HostX64\x64\cl.exe]],
-        toolchain_info = {
-            cachekey = "msvc_arch_x64_plat_windows",
-            name = "msvc",
-            plat = "windows",
-            arch = "x64"
-        },
-        toolname = "cl"
-    },
-    ["tool_target_luaohook.keyboard_windows_x64_cxx"] = {
-        program = [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\bin\HostX64\x64\cl.exe]],
-        toolchain_info = {
-            cachekey = "msvc_arch_x64_plat_windows",
-            name = "msvc",
-            plat = "windows",
-            arch = "x64"
-        },
-        toolname = "cl"
-    },
-    ["tool_target_luaohook.mouse_windows_x64_sh"] = {
-        program = [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\bin\HostX64\x64\link.exe]],
-        toolchain_info = {
-            cachekey = "msvc_arch_x64_plat_windows",
-            name = "msvc",
-            plat = "windows",
-            arch = "x64"
-        },
-        toolname = "link"
-    },
-    ["tool_target_luaohook.keyboard_windows_x64_cc"] = {
-        program = [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\bin\HostX64\x64\cl.exe]],
-        toolchain_info = {
-            cachekey = "msvc_arch_x64_plat_windows",
-            name = "msvc",
-            plat = "windows",
-            arch = "x64"
-        },
-        toolname = "cl"
-    },
-    ["tool_target_luaohook.event_windows_x64_cc"] = {
-        program = [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\bin\HostX64\x64\cl.exe]],
-        toolchain_info = {
-            cachekey = "msvc_arch_x64_plat_windows",
-            name = "msvc",
-            plat = "windows",
-            arch = "x64"
-        },
-        toolname = "cl"
-    },
-    ["tool_target_luaohook.keyboard_windows_x64_sh"] = {
-        program = [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\bin\HostX64\x64\link.exe]],
-        toolchain_info = {
-            cachekey = "msvc_arch_x64_plat_windows",
-            name = "msvc",
-            plat = "windows",
-            arch = "x64"
-        },
-        toolname = "link"
-    },
     msvc_arch_x64_plat_windows = {
         vcvars = {
-            WindowsSdkBinPath = [[C:\Program Files (x86)\Windows Kits\10\bin\]],
-            VSCMD_ARG_HOST_ARCH = "x64",
-            VSCMD_ARG_app_plat = "Desktop",
-            VS170COMNTOOLS = [[C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\]],
-            WindowsSdkDir = [[C:\Program Files (x86)\Windows Kits\10\]],
-            LIBPATH = [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\ATLMFC\lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\lib\x86\store\references;C:\Program Files (x86)\Windows Kits\10\UnionMetadata\10.0.22000.0;C:\Program Files (x86)\Windows Kits\10\References\10.0.22000.0;C:\Windows\Microsoft.NET\Framework64\v4.0.30319]],
-            WindowsSdkVerBinPath = [[C:\Program Files (x86)\Windows Kits\10\bin\10.0.22000.0\]],
-            VisualStudioVersion = "17.0",
-            VCToolsRedistDir = [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Redist\MSVC\14.36.32532\]],
-            VCToolsInstallDir = [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\]],
-            PATH = [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\bin\HostX64\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\VC\VCPackages;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\TestWindow;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer;C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\bin\Roslyn;C:\Program Files\Microsoft Visual Studio\2022\Community\Team Tools\Performance Tools\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\Team Tools\Performance Tools;C:\Program Files (x86)\Windows Kits\10\bin\10.0.22000.0\\x64;C:\Program Files (x86)\Windows Kits\10\bin\\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\\MSBuild\Current\Bin\amd64;C:\Windows\Microsoft.NET\Framework64\v4.0.30319;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\;C:\Users\justi\xmake;C:\Program Files\PowerShell\7;C:\Program Files\Oculus\Support\oculus-runtime;C:\Program Files\Microsoft\jdk-11.0.18.10-hotspot\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Users\justi\AppData\Local\Android\Sdk;C:\Program Files\komorebi\bin\;C:\Program Files\Git\cmd;C:\Program Files\LLVM\bin;C:\Program Files\dotnet\;C:\Users\justi\Downloads\luarocks-3.9.2-windows-64\luarocks-3.9.2-windows-64\;C:\Program Files\Go\bin;C:\Program Files\Docker\Docker\resources\bin;C:\zig;C:\Program Files\PowerShell\7\;C:\Users\justi\scoop\apps\mingw\current\bin;C:\Users\justi\scoop\apps\llvm\current\bin;C:\Users\justi\scoop\apps\vulkan\current\Bin;C:\Users\justi\scoop\apps\vulkan\current\Tools;C:\Users\justi\.console-ninja\.bin;C:\Users\justi\scoop\shims;C:\Users\justi\Desktop\luaohook;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\bin\HostX64\x86;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\bin\HostX64\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\VC\VCPackages;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\TestWindow;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer;C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\bin\Roslyn;C:\Program Files\Microsoft Visual Studio\2022\Community\Team Tools\Performance Tools;C:\Program Files (x86)\Windows Kits\10\bin\10.0.22000.0\\x64;C:\Program Files (x86)\Windows Kits\10\bin\\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\\MSBuild\Current\Bin\amd64;C:\Windows\Microsoft.NET\Framework64\v4.0.30319;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\;C:\Prog;C:\Users\justi\AppData\Local\Microsoft\WindowsApps;C:\Users\justi\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\justi\.dotnet\tools;C:\Users\justi\go\bin;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\VC\Linux\bin\ConnectionManagerExe;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\vcpkg]],
-            UCRTVersion = "10.0.22000.0",
-            VSCMD_ARG_TGT_ARCH = "x64",
-            DevEnvdir = [[C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\]],
-            VSCMD_VER = "17.6.4",
-            VCToolsVersion = "14.36.32532",
-            WindowsLibPath = [[C:\Program Files (x86)\Windows Kits\10\UnionMetadata\10.0.22000.0;C:\Program Files (x86)\Windows Kits\10\References\10.0.22000.0]],
-            UniversalCRTSdkDir = [[C:\Program Files (x86)\Windows Kits\10\]],
-            ExtensionSdkDir = [[C:\Program Files (x86)\Microsoft SDKs\Windows Kits\10\ExtensionSDKs]],
-            LIB = [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\ATLMFC\lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\lib\x64;C:\Program Files (x86)\Windows Kits\10\lib\10.0.22000.0\ucrt\x64;C:\Program Files (x86)\Windows Kits\10\\lib\10.0.22000.0\\um\x64]],
-            VCInstallDir = [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\]],
-            VCIDEInstallDir = [[C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\VC\]],
-            INCLUDE = [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\ATLMFC\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include;C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\um;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\shared;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\winrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\cppwinrt]],
             WindowsSDKVersion = "10.0.22000.0",
-            VSInstallDir = [[C:\Program Files\Microsoft Visual Studio\2022\Community\]]
+            ExtensionSdkDir = [[C:\Program Files (x86)\Microsoft SDKs\Windows Kits\10\ExtensionSDKs]],
+            VisualStudioVersion = "17.0",
+            VS170COMNTOOLS = [[C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\]],
+            UCRTVersion = "10.0.22000.0",
+            PATH = [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\bin\HostX64\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\VC\VCPackages;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\TestWindow;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer;C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\bin\Roslyn;C:\Program Files\Microsoft Visual Studio\2022\Community\Team Tools\Performance Tools\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\Team Tools\Performance Tools;C:\Program Files (x86)\Windows Kits\10\bin\10.0.22000.0\\x64;C:\Program Files (x86)\Windows Kits\10\bin\\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\\MSBuild\Current\Bin\amd64;C:\Windows\Microsoft.NET\Framework64\v4.0.30319;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\;C:\Users\justi\xmake;C:\Program Files\PowerShell\7;C:\Program Files\Oculus\Support\oculus-runtime;C:\Program Files\Microsoft\jdk-11.0.18.10-hotspot\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Users\justi\AppData\Local\Android\Sdk;C:\Program Files\komorebi\bin\;C:\Program Files\Git\cmd;C:\Program Files\LLVM\bin;C:\Program Files\dotnet\;C:\Users\justi\Downloads\luarocks-3.9.2-windows-64\luarocks-3.9.2-windows-64\;C:\Program Files\Go\bin;C:\Program Files\Docker\Docker\resources\bin;C:\zig;C:\Program Files\PowerShell\7\;C:\Users\justi\scoop\apps\mingw\current\bin;C:\Users\justi\scoop\apps\llvm\current\bin;C:\Users\justi\scoop\apps\vulkan\current\Bin;C:\Users\justi\scoop\apps\vulkan\current\Tools;C:\Users\justi\.console-ninja\.bin;C:\Users\justi\scoop\shims;C:\Users\justi\Desktop\luaohook;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\bin\HostX64\x86;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\bin\HostX64\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\VC\VCPackages;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\TestWindow;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer;C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\bin\Roslyn;C:\Program Files\Microsoft Visual Studio\2022\Community\Team Tools\Performance Tools;C:\Program Files (x86)\Windows Kits\10\bin\10.0.22000.0\\x64;C:\Program Files (x86)\Windows Kits\10\bin\\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\\MSBuild\Current\Bin\amd64;C:\Windows\Microsoft.NET\Framework64\v4.0.30319;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\;C:\Prog;C:\Users\justi\AppData\Local\Microsoft\WindowsApps;C:\Users\justi\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\justi\.dotnet\tools;C:\Users\justi\go\bin;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\VC\Linux\bin\ConnectionManagerExe;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\vcpkg]],
+            VSCMD_VER = "17.6.4",
+            VCToolsRedistDir = [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Redist\MSVC\14.36.32532\]],
+            VSCMD_ARG_TGT_ARCH = "x64",
+            WindowsSdkDir = [[C:\Program Files (x86)\Windows Kits\10\]],
+            VCToolsVersion = "14.36.32532",
+            VSCMD_ARG_HOST_ARCH = "x64",
+            INCLUDE = [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\ATLMFC\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include;C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\um;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\shared;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\winrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\cppwinrt]],
+            LIBPATH = [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\ATLMFC\lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\lib\x86\store\references;C:\Program Files (x86)\Windows Kits\10\UnionMetadata\10.0.22000.0;C:\Program Files (x86)\Windows Kits\10\References\10.0.22000.0;C:\Windows\Microsoft.NET\Framework64\v4.0.30319]],
+            WindowsLibPath = [[C:\Program Files (x86)\Windows Kits\10\UnionMetadata\10.0.22000.0;C:\Program Files (x86)\Windows Kits\10\References\10.0.22000.0]],
+            VSInstallDir = [[C:\Program Files\Microsoft Visual Studio\2022\Community\]],
+            WindowsSdkVerBinPath = [[C:\Program Files (x86)\Windows Kits\10\bin\10.0.22000.0\]],
+            LIB = [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\ATLMFC\lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\lib\x64;C:\Program Files (x86)\Windows Kits\10\lib\10.0.22000.0\ucrt\x64;C:\Program Files (x86)\Windows Kits\10\\lib\10.0.22000.0\\um\x64]],
+            VCToolsInstallDir = [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\]],
+            UniversalCRTSdkDir = [[C:\Program Files (x86)\Windows Kits\10\]],
+            DevEnvdir = [[C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\]],
+            VCInstallDir = [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\]],
+            VSCMD_ARG_app_plat = "Desktop",
+            VCIDEInstallDir = [[C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\VC\]],
+            WindowsSdkBinPath = [[C:\Program Files (x86)\Windows Kits\10\bin\]]
         },
-        vs_toolset = "14.36.32532",
-        plat = "windows",
         arch = "x64",
-        vs_sdkver = "10.0.22000.0",
-        vs = "2022",
         vcarchs = {
             "arm64",
             "x64",
             "x86"
         },
-        __global = true
+        __global = true,
+        vs_toolset = "14.36.32532",
+        plat = "windows",
+        vs = "2022",
+        vs_sdkver = "10.0.22000.0"
+    },
+    ["tool_target_luaohook.mouse_windows_x64_cc"] = {
+        program = [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\bin\HostX64\x64\cl.exe]],
+        toolname = "cl",
+        toolchain_info = {
+            plat = "windows",
+            arch = "x64",
+            name = "msvc",
+            cachekey = "msvc_arch_x64_plat_windows"
+        }
+    },
+    ["tool_target_luaohook.keyboard_windows_x64_sh"] = {
+        program = [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\bin\HostX64\x64\link.exe]],
+        toolname = "link",
+        toolchain_info = {
+            plat = "windows",
+            arch = "x64",
+            name = "msvc",
+            cachekey = "msvc_arch_x64_plat_windows"
+        }
+    },
+    ["tool_target_luaohook.mouse_windows_x64_cxx"] = {
+        program = [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\bin\HostX64\x64\cl.exe]],
+        toolname = "cl",
+        toolchain_info = {
+            plat = "windows",
+            arch = "x64",
+            name = "msvc",
+            cachekey = "msvc_arch_x64_plat_windows"
+        }
+    },
+    ["tool_target_luaohook.event_windows_x64_sh"] = {
+        program = [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\bin\HostX64\x64\link.exe]],
+        toolname = "link",
+        toolchain_info = {
+            plat = "windows",
+            arch = "x64",
+            name = "msvc",
+            cachekey = "msvc_arch_x64_plat_windows"
+        }
+    },
+    ["tool_target_luaohook.mouse_windows_x64_sh"] = {
+        program = [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\bin\HostX64\x64\link.exe]],
+        toolname = "link",
+        toolchain_info = {
+            plat = "windows",
+            arch = "x64",
+            name = "msvc",
+            cachekey = "msvc_arch_x64_plat_windows"
+        }
+    },
+    ["tool_target_luaohook.keyboard_windows_x64_cc"] = {
+        program = [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\bin\HostX64\x64\cl.exe]],
+        toolname = "cl",
+        toolchain_info = {
+            plat = "windows",
+            arch = "x64",
+            name = "msvc",
+            cachekey = "msvc_arch_x64_plat_windows"
+        }
+    },
+    ["tool_target_luaohook.event_windows_x64_cc"] = {
+        program = [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\bin\HostX64\x64\cl.exe]],
+        toolname = "cl",
+        toolchain_info = {
+            plat = "windows",
+            arch = "x64",
+            name = "msvc",
+            cachekey = "msvc_arch_x64_plat_windows"
+        }
+    },
+    ["tool_target_luaohook.event_windows_x64_cxx"] = {
+        program = [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\bin\HostX64\x64\cl.exe]],
+        toolname = "cl",
+        toolchain_info = {
+            plat = "windows",
+            arch = "x64",
+            name = "msvc",
+            cachekey = "msvc_arch_x64_plat_windows"
+        }
     }
 }
