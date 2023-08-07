@@ -13,7 +13,8 @@
  *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  *    GNU General Public License for more details.
  */
- //HUGE thanks to nameless (its his actual name) for writting this file and effectively showing me how the lua stack works!
+// HUGE thanks to nameless (its his actual name) for writting this file and
+// effectively showing me how the lua stack works!
 #include <lauxlib.h>
 #include <lua.h>
 #include <uiohook.h>
@@ -28,12 +29,9 @@ void luiohook_on_event(uiohook_event *const event) {
     lua_pushinteger(luiohook_state, event->data.keyboard.keycode);
     lua_gettable(luiohook_state, -2);
 
-
     if (lua_isfunction(luiohook_state, -1)) {
       lua_pushfstring(luiohook_state, "%lc", event->data.keyboard.keychar);
       lua_pushinteger(luiohook_state, event->time);
-
-
 
       lua_call(luiohook_state, 2, 1);
 
@@ -43,12 +41,11 @@ void luiohook_on_event(uiohook_event *const event) {
         (void)status;
       }
 
-      lua_pop(luiohook_state, 1); 
+      lua_pop(luiohook_state, 1);
     }
-    lua_pop(luiohook_state, 1); 
+    lua_pop(luiohook_state, 1);
   }
 }
-
 
 int luiohook_register(lua_State *L) {
   luaL_argcheck(L, lua_isnumber(L, 1), 1, "expected number");
@@ -60,14 +57,12 @@ int luiohook_register(lua_State *L) {
   lua_pushvalue(L, 1);
   lua_pushvalue(L, 2);
 
-
   lua_settable(L, -3);
 
+  lua_pop(L, 1);
 
-  lua_pop(L, 1); 
+  lua_pushvalue(L, 2);
 
-  lua_pushvalue(L, 2); 
-   
   return 1;
 }
 
@@ -80,7 +75,7 @@ int luiohook_unregister(lua_State *L) {
     lua_pushnil(L);
 
     lua_settable(L, -3);
-    lua_pop(L, 1); 
+    lua_pop(L, 1);
   } else if (lua_isfunction(L, 1)) {
     lua_pushstring(L, "uiohook_key_pressed");
     lua_gettable(L, LUA_REGISTRYINDEX);
@@ -118,13 +113,12 @@ static const struct luaL_Reg luiohook_funcs1[] = {
     {"run", luiohook_run},
     {"register", luiohook_register},
     {"unregister", luiohook_unregister},
-    {NULL, NULL}
-};
+    {NULL, NULL}};
 
- int luaopen_luaohook_event(lua_State *L) {
-    lua_pushstring(L, "uiohook_key_pressed");
-    lua_newtable(L);
-    lua_settable(L, LUA_REGISTRYINDEX);
-    luaL_newlib(L, luiohook_funcs1);
-    return 1;
+int luaopen_luaohook_event(lua_State *L) {
+  lua_pushstring(L, "uiohook_key_pressed");
+  lua_newtable(L);
+  lua_settable(L, LUA_REGISTRYINDEX);
+  luaL_register(L, "event", luiohook_funcs1);
+  return 1;
 }

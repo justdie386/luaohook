@@ -82,6 +82,6 @@ static const struct luaL_Reg luiohook_funcs3[] = {
 };
 
  int luaopen_luaohook_keyboard(lua_State *L) {
-    luaL_newlib(L, luiohook_funcs3);
+    	luaL_register(L, "keyboard", luiohook_funcs3);
     return 1;
 }

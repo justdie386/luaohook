@@ -57,7 +57,8 @@ target("luaohook.event")
     end
 target("luaohook.mouse")
    add_rules("luarocks.module")
-   add_files("src/mouse.c")
+   add_files("src/mouse.c", "src/mouse/*.c")
+   add_headerfiles("src/mouse/*.h")
    if is_plat("windows") then
        add_packages(windows_packages)
         add_links(windows_linker)
