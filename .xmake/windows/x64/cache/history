@@ -1,20 +1,6 @@
 {
     cmdlines = {
-        [[xmake l c:\Users\justi\.vscode\extensions\tboox.xmake-vscode-2.1.5\assets\explorer.lua]],
-        [[xmake f --root -y --includedirs=C:\lua\luajit/include --linkdirs=C:\lua\luajit/bin --syslinks=lua51]],
-        "xmake --root",
-        "xmake install --root -y -o output",
-        "xmake check",
-        [[xmake f --root -y --includedirs=C:\lua\luajit/include --linkdirs=C:\lua\luajit/bin --syslinks=lua51]],
-        "xmake --root",
-        "xmake install --root -y -o output",
-        [[xmake l c:\Users\justi\.vscode\extensions\tboox.xmake-vscode-2.1.5\assets\explorer.lua]],
-        [[xmake l c:\Users\justi\.vscode\extensions\tboox.xmake-vscode-2.1.5\assets\explorer.lua]],
-        [[xmake l c:\Users\justi\.vscode\extensions\tboox.xmake-vscode-2.1.5\assets\explorer.lua]],
-        [[xmake l c:\Users\justi\.vscode\extensions\tboox.xmake-vscode-2.1.5\assets\explorer.lua]],
-        [[xmake l c:\Users\justi\.vscode\extensions\tboox.xmake-vscode-2.1.5\assets\explorer.lua]],
-        [[xmake l c:\Users\justi\.vscode\extensions\tboox.xmake-vscode-2.1.5\assets\explorer.lua]],
-        [[xmake l c:\Users\justi\.vscode\extensions\tboox.xmake-vscode-2.1.5\assets\explorer.lua]],
+        [[xmake l c:\Users\justi\.vscode\extensions\tboox.xmake-vscode-2.1.5\assets\update_intellisense.lua .vscode]],
         [[xmake l c:\Users\justi\.vscode\extensions\tboox.xmake-vscode-2.1.5\assets\explorer.lua]]
     }
 }
