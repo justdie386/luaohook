@@ -21,7 +21,7 @@ local windows_packages = {"luajit", "libuiohook"}
 local windows_linker = {"user32", "kernel32", "gdi32", "advapi32"}
 local macos_frameworks = {"CoreFoundation", "Foundation", "Cocoa"}
 local macos_packages = {"libuiohook"}
-local linux_packages = {"libuiohook", "libxkbcommon", "libxcb", "libx11"}
+local linux_packages = {"libuiohook", "libxkbcommon", "libxcb", "libx11", "luajit"}
 local linux_linkers = {"xkbcommon", "xcb", "Xinerama", "X11", "Xt", "xkbcommon-x11"}
 add_rules("mode.debug", "mode.release")
 if is_plat("windows") then

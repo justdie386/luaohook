@@ -1,5 +1,8 @@
 {
     cmdlines = {
-        [[xmake l c:\Users\justi\.vscode\extensions\tboox.xmake-vscode-2.1.5\assets\explorer.lua]]
+        [[xmake l c:\Users\justi\.vscode\extensions\tboox.xmake-vscode-2.1.5\assets\explorer.lua]],
+        "xmake check",
+        [[xmake l c:\Users\justi\.vscode\extensions\tboox.xmake-vscode-2.1.5\assets\config.lua]],
+        [[xmake l c:\Users\justi\.vscode\extensions\tboox.xmake-vscode-2.1.5\assets\update_intellisense.lua .vscode]]
     }
 }
