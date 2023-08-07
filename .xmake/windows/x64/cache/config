@@ -1,0 +1,11 @@
+{
+    recheck = false,
+    mtimes = {
+        ["xmake.lua"] = 1691439137
+    },
+    options = {
+        syslinks = "lua51",
+        linkdirs = [[C:\lua\luajit/bin]],
+        includedirs = [[C:\lua\luajit/include]]
+    }
+}

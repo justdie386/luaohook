@@ -2,7 +2,7 @@ local mouse = require"luaohook.mouse"
 function sleep (a) 
     local sec = tonumber(os.clock() + a); 
     while (os.clock() < sec) do 
-    end 
+    end
 end
 
 sleep(2)
