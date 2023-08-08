@@ -1,8 +1,0 @@
-[ 23%]: compiling.release src\event.c
-[ 23%]: compiling.release src\mouse\win32.c
-[ 23%]: compiling.release src\mouse.c
-[ 23%]: compiling.release src\keyboard.c
-[ 53%]: linking.release event.dll
-[ 53%]: linking.release mouse.dll
-[ 53%]: linking.release keyboard.dll
-[100%]: build ok, spent 0.781s

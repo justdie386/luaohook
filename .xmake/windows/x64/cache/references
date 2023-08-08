@@ -1,6 +1,0 @@
-{
-    packages = {
-        [[C:\Users\justi\AppData\Local\.xmake\packages\l\luajit\2.1.0-beta3\13e6f4a6b257413e98184c57fe7c168b]],
-        [[C:\Users\justi\AppData\Local\.xmake\packages\l\libuiohook\1.2.2\cafd076020034bb5bf8455b8c8407c4a]]
-    }
-}

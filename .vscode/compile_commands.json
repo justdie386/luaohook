@@ -13,9 +13,4 @@
   "directory": "c:\\Users\\justi\\Desktop\\luaohook",
   "arguments": ["cl.exe", "/c", "/nologo", "/m64", "/EHsc", "/Fobuild\\.objs\\luaohook.mouse\\windows\\x64\\src\\mouse.c.obj", "src\\mouse.c"],
   "file": "src\\mouse.c"
-},
-{
-  "directory": "c:\\Users\\justi\\Desktop\\luaohook",
-  "arguments": ["cl.exe", "/c", "/nologo", "/m64", "/EHsc", "/Fobuild\\.objs\\luaohook.mouse\\windows\\x64\\src\\mouse\\win32.c.obj", "src\\mouse\\win32.c"],
-  "file": "src\\mouse\\win32.c"
 }]

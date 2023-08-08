@@ -1,15 +1,20 @@
 #ifdef _WIN32
 #include <windows.h>
 #include <winuser.h>
-
+#include "mouse/win32/win32.h"
+#define coords POINT
 #define sleep(x) Sleep(1000 * (x))
-#else
+#elif __APPLE__
 #include <unistd.h>
+#include "mouse/apple/osx.h"
+#define coords CGPoint
+#elif __linux__ 
+#include <unistd.h>
+#include "mouse/x11/x11.h"
 #endif
 #include <lauxlib.h>
 #include <lua.h>
 #include <uiohook.h>
-#include "mouse/win32.h"
 
 static uiohook_event *event = NULL;
 
@@ -17,7 +22,7 @@ int press(lua_State *L) {
   event = (uiohook_event *)malloc(sizeof(uiohook_event));
   event->type = EVENT_MOUSE_PRESSED;
   event->data.mouse.button = lua_tonumber(L, 1);
-  POINT p = findcoordinates();
+  coords p = findcoordinates();
   event->data.mouse.x = p.x/2;
   event->data.mouse.y = p.y;
   hook_post_event(event);

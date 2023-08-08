@@ -22,6 +22,12 @@ build = {
                 vs_runtime = "MT",
                 arch = "x64",
             },
+                install = {
+        lua = {
+            ["luaohook.enums"] = "src/keys/keys.lua"
+        },
+                },
+                    copy_directories = {}
         }
     },
 }

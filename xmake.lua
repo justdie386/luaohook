@@ -21,7 +21,7 @@ local windows_packages = {"luajit", "libuiohook"}
 local windows_linker = {"user32", "kernel32", "gdi32", "advapi32"}
 local macos_frameworks = {"CoreFoundation", "Foundation", "Cocoa"}
 local macos_packages = {"libuiohook"}
-local linux_packages = {"libuiohook", "libxkbcommon", "libxcb", "libx11", "luajit"}
+local linux_packages = {"libuiohook", "libxkbcommon", "libxcb", "libx11"}
 local linux_linkers = {"xkbcommon", "xcb", "Xinerama", "X11", "Xt", "xkbcommon-x11"}
 add_rules("mode.debug", "mode.release")
 if is_plat("windows") then
@@ -57,15 +57,20 @@ target("luaohook.event")
     end
 target("luaohook.mouse")
    add_rules("luarocks.module")
-   add_files("src/mouse.c", "src/mouse/*.c")
-   add_headerfiles("src/mouse/*.h")
+   add_files("src/mouse.c")
    if is_plat("windows") then
        add_packages(windows_packages)
         add_links(windows_linker)
+        add_headerfiles("src/mouse/win32/win32.h")
+        add_files("src/mouse/win32/win32.c")
     elseif is_plat("macosx") then
         add_packages(macos_packages)
         add_frameworks(macos_frameworks)
+        add_headerfiles("src/mouse/apple/osx.h")
+        add_files("src/mouse/apple/osx.c")
     elseif is_plat("linux") then
         add_links(linux_linkers)
         add_packages(linux_packages)
+        add_headerfiles("src/mouse/x11/x11.h")
+        add_files("src/mouse/x11/x11.c")
    end
