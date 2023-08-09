@@ -1,7 +1,6 @@
 {
     cmdlines = {
-        "xmake check"
-    }
-}sti\.vscode\extensions\tboox.xmake-vscode-2.1.5\assets\config.lua]]
+        "xmake check",
+        [[xmake l c:\Users\justi\.vscode\extensions\tboox.xmake-vscode-2.1.5\assets\explorer.lua]]
     }
 }

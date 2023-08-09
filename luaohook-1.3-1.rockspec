@@ -16,18 +16,11 @@ dependencies = {
 }
 build = {
     type = "xmake",
-    variables = {
-        xmake = {
-            win32 = {
-                vs_runtime = "MT",
-                arch = "x64",
-            },
-                install = {
+    install = {
         lua = {
-            ["luaohook.enums"] = "src/keys/keys.lua"
-        },
-                },
-                    copy_directories = {}
+            ["luaohook.keys"] = "src/buttons/keys.lua",
+            ["luaohook.mouse"] = "src/buttons/mouse.lua"
         }
     },
 }
+

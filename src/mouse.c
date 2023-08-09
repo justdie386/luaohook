@@ -103,13 +103,13 @@ static const struct luaL_Reg luiohook_funcs2[] = {
     {"pressCoordinates", pressCoordinates},
     {"pressHold", pressHold},
     {"releaseHold", releaseHold},
-    {"get_width", get_monitor_width},
-    {"get_height", get_monitor_height},
-    {"get_mouse_acceleration_multiplier", get_acceleration_multiplier},
-    {"get_mouse_acceleration_threshold", get_acceleration_threshold},
-    {"get_keyboard_repeat_delay", get_keyboard_repeat_delay},
-    {"get_mouse_sensitivity", get_sensitivity},
-    {"get_keyboard_repeat_rate", get_keyboard_repeat_rate},
+    {"getWidth", get_monitor_width},
+    {"getHeight", get_monitor_height},
+    {"getMouseAccelerationMultiplier", get_acceleration_multiplier},
+    {"getMouseAccelerationThreshold", get_acceleration_threshold},
+    {"getKeyboardRepeatDelay", get_keyboard_repeat_delay},
+    {"getMouseSensitivity", get_sensitivity},
+    {"getKeyboardRepeatRate", get_keyboard_repeat_rate},
     {NULL, NULL}};
 
 int luaopen_luaohook_mouse(lua_State *L) {

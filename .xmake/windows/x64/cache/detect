@@ -1,26 +1,37 @@
 {
-    find_program = {
-        ["pkg-config"] = false,
-        pkgconf = false,
-        ["cl.exe"] = "cl.exe",
-        ["link.exe"] = "link.exe"
-    },
-    ["detect.sdks.find_vcpkgdir"] = "C:/Users/justi/vcpkg",
-    ["lib.detect.has_flags"] = {
-        ["windows_x64_link.exe_14.36.32535.0_sh__-nologo -m64 -m64 -machine:x64_/export:luaopen_luaohook_event"] = true,
-        ["windows_x64_link.exe_14.36.32535.0_sh__-nologo -m64 -m64 -machine:x64_/export:luaopen_luaohook_mouse"] = true,
-        ["windows_x64_link.exe_14.36.32535.0_sh__-nologo -m64 -m64 -machine:x64_/export:luaopen_luaohook_keyboard"] = true
+    find_programver = {
+        ["link.exe"] = "14.36.32535.0"
     },
     find_program_msvc_arch_x64_plat_windows_checktoolsh = {
         ["link.exe"] = "link.exe"
     },
+    ["detect.sdks.find_vcpkgdir"] = "C:/Users/justi/scoop/apps/vcpkg/current",
+    find_package_windows_x64 = {
+        lua_release = {
+            libfiles = {
+                [[C:\Users\justi\scoop\apps\vcpkg\current\installed\x64-windows-static\lib\lua.lib]]
+            },
+            includedirs = {
+                [[C:\Users\justi\scoop\apps\vcpkg\current\installed\x64-windows-static\include]]
+            },
+            links = {
+                "lua"
+            },
+            linkdirs = {
+                [[C:\Users\justi\scoop\apps\vcpkg\current\installed\x64-windows-static\lib]]
+            }
+        }
+    },
+    ["lib.detect.has_flags"] = {
+        ["windows_x64_link.exe_14.36.32535.0_sh__-nologo -m64 -m64 -machine:x64_/export:luaopen_luaohook_keyboard"] = true,
+        ["windows_x64_link.exe_14.36.32535.0_sh__-nologo -m64 -m64 -machine:x64_/export:luaopen_luaohook_mouse"] = true,
+        ["windows_x64_link.exe_14.36.32535.0_sh__-nologo -m64 -m64 -machine:x64_/export:luaopen_luaohook_event"] = true
+    },
+    find_program = {
+        ["cl.exe"] = "cl.exe",
+        ["link.exe"] = "link.exe"
+    },
     find_program_msvc_arch_x64_plat_windows_checktoolcc = {
         ["cl.exe"] = "cl.exe"
-    },
-    find_programver = {
-        ["link.exe"] = "14.36.32535.0"
-    },
-    find_package_windows_x64 = {
-        lua_release = false
     }
 }
