@@ -17,23 +17,25 @@ luarocks install luaohook
 
 ```lua
 
-local keyboard = require"luaohook.keyoard"
-local mouse = require"luaohook.mouse"
-local event = require"luaohook.event"
-local monitor_width = monitor.get_width()
-local monitor_height = monitor.get_height()
-for i=1,5 do
-
-end
-event.register(0x001E, function()
-print("nice")
-keyboard.kbpress(0x002E)
+local mouse = require "luaohook.mouse"
+local event = require "luaohook.event"
+local keys = require "luaohook.keyboardkeys"
+local mouse = require "luaohook.mousekeys"
+event.register(keys["A"], function()
+    mouse.press(mouse["MOUSE_BUTTON1"])
 end)
 
 event.run()
+
 ```
 
-The keys are mapped here
+Now to be fair, this might be a lot of require, but this is to ensure you only have what you need, such tools need to be fast, so might aswell make it as lightweight as possible
+
+NOTE: i haven't implemented the get coordinates on X11 (don't even think about wayland) so the mouse.press() function will only work on windows and macos, you will have to manually enter the coordinates using the functions that are available to you.
+
+I don't plan on writting docs, so you'll have to read the source code, lucky for you, it's simple, so the functions name quite literaly does what the name says it does! hooray!
+
+The keys are mapped here if the ones from luaohook.keyboardkeys and luaohook.mousekeys aren't enough
 
 https://github.com/kwhat/libuiohook/blob/1.2/include/uiohook.h#LL137C1-L285C74
 

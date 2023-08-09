@@ -18,8 +18,8 @@ build = {
     type = "xmake",
     install = {
         lua = {
-            ["luaohook.keys"] = "src/buttons/keys.lua",
-            ["luaohook.mouse"] = "src/buttons/mouse.lua"
+            ["luaohook.keyboardkeys"] = "src/buttons/keyboardkeys.lua",
+            ["luaohook.mousekeys"] = "src/buttons/mousekeys.lua"
         }
     },
 }
