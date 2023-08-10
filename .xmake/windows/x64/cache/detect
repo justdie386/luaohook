@@ -1,20 +1,37 @@
 {
-    ["detect.sdks.find_vcpkgdir"] = "C:/Users/justi/scoop/apps/vcpkg/current",
     find_package_windows_x64 = {
         lua_release = {
-            includedirs = {
-                [[C:\Users\justi\scoop\apps\vcpkg\current\installed\x64-windows-static\include]]
-            },
-            version = "5.4.4",
-            linkdirs = {
-                [[C:\Users\justi\scoop\apps\vcpkg\current\installed\x64-windows-static\lib]]
+            links = {
+                "lua"
             },
             libfiles = {
                 [[C:\Users\justi\scoop\apps\vcpkg\current\installed\x64-windows-static\lib\lua.lib]]
             },
-            links = {
-                "lua"
+            includedirs = {
+                [[C:\Users\justi\scoop\apps\vcpkg\current\installed\x64-windows-static\include]]
+            },
+            linkdirs = {
+                [[C:\Users\justi\scoop\apps\vcpkg\current\installed\x64-windows-static\lib]]
             }
         }
+    },
+    find_program_msvc_arch_x64_plat_windows_checktoolsh = {
+        ["link.exe"] = "link.exe"
+    },
+    find_program = {
+        ["cl.exe"] = "cl.exe",
+        ["link.exe"] = "link.exe"
+    },
+    ["detect.sdks.find_vcpkgdir"] = "C:/Users/justi/scoop/apps/vcpkg/current",
+    ["lib.detect.has_flags"] = {
+        ["windows_x64_link.exe_14.36.32535.0_sh__-nologo -m64 -m64 -machine:x64_/export:luaopen_luaohook_event"] = true,
+        ["windows_x64_link.exe_14.36.32535.0_sh__-nologo -m64 -m64 -machine:x64_/export:luaopen_luaohook_keyboard"] = true,
+        ["windows_x64_link.exe_14.36.32535.0_sh__-nologo -m64 -m64 -machine:x64_/export:luaopen_luaohook_mouse"] = true
+    },
+    find_program_msvc_arch_x64_plat_windows_checktoolcc = {
+        ["cl.exe"] = "cl.exe"
+    },
+    find_programver = {
+        ["link.exe"] = "14.36.32535.0"
     }
 }
