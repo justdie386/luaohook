@@ -1,21 +1,23 @@
 #ifdef _WIN32
 #include <windows.h>
 #include <winuser.h>
-#include "mouse/win32/win32.h"
+#include "win32/win32.h"
 #define coords POINT
 #define sleep(x) Sleep(1000 * (x))
 #elif __APPLE__
 #include <unistd.h>
-#include "mouse/apple/osx.h"
+#include "apple/osx.h"
 #define coords CGPoint
 #elif __linux__ 
 #include <unistd.h>
-#include "mouse/x11/x11.h"
+#include "x11/x11.h"
+#define coords MouseCoordinates
 #endif
 #include <lauxlib.h>
 #include <lua.h>
 #include <uiohook.h>
-
+#include "press.h"
+// no comments, enjoy this *perfect* code
 static uiohook_event *event = NULL;
 
 int press(lua_State *L) {
@@ -27,7 +29,7 @@ int press(lua_State *L) {
   event->data.mouse.y = p.y;
   hook_post_event(event);
   event->type = EVENT_MOUSE_RELEASED;
-  POINT p2 = findcoordinates();
+  coords p2 = findcoordinates();
   event->data.mouse.x = p2.x/2;
   event->data.mouse.y = p2.y;
   hook_post_event(event);
@@ -96,23 +98,5 @@ int get_monitor_width(lua_State *L) {
   screen_data *monitors = hook_create_screen_info(&count);
   lua_newtable(L);
   lua_pushinteger(L, monitors->width);
-  return 1;
-}
-static const struct luaL_Reg luiohook_funcs2[] = {
-    {"press", press},
-    {"pressCoordinates", pressCoordinates},
-    {"pressHold", pressHold},
-    {"releaseHold", releaseHold},
-    {"getWidth", get_monitor_width},
-    {"getHeight", get_monitor_height},
-    {"getMouseAccelerationMultiplier", get_acceleration_multiplier},
-    {"getMouseAccelerationThreshold", get_acceleration_threshold},
-    {"getKeyboardRepeatDelay", get_keyboard_repeat_delay},
-    {"getMouseSensitivity", get_sensitivity},
-    {"getKeyboardRepeatRate", get_keyboard_repeat_rate},
-    {NULL, NULL}};
-
-int luaopen_luaohook_mouse(lua_State *L) {
-  luaL_register(L, "mouse", luiohook_funcs2);
   return 1;
 }

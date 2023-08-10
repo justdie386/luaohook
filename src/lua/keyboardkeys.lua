@@ -1,3 +1,6 @@
+--this file contains all the keys that can be listened to
+--more of them are available on the libuiohook
+--documentation but i couldn't figure out how to add them
 local enums = {
     ["F1"] = 0x003B,
     ["F2"] = 0x003C,
@@ -74,22 +77,6 @@ local enums = {
     ["WAKE"] = 0xE063,
     ["UNDEFINED"] = 0x0000,
     ["CHAR_UNDEFINED"] = 0xFFFF,
-    ["MASK_SHIFT_L"] = 1 << 0,
-    ["MASK_CTRL_L"] = 1 << 1,
-    ["MASK_META_L"] = 1 << 2,
-    ["MASK_ALT_L"] = 1 << 3,
-    ["MASK_SHIFT_R"] = 1 << 4,
-    ["MASK_CTRL_R"] = 1 << 5,
-    ["MASK_META_R"] = 1 << 6,
-    ["MASK_ALT_R"] = 1 << 7,
-    ["MASK_BUTTON1"] = 1 << 8,
-    ["MASK_BUTTON2"] = 1 << 9,
-    ["MASK_BUTTON3"] = 1 << 10,
-    ["MASK_BUTTON4"] = 1 << 11,
-    ["MASK_BUTTON5"] = 1 << 12,
-    ["MASK_NUM_LOCK"] = 1 << 13,
-    ["MASK_CAPS_LOCK"] = 1 << 14,
-    ["MASK_SCROLL_LOCK"] = 1 << 15,
 }
 
 return enums

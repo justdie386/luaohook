@@ -11,15 +11,16 @@ description = {
     ]]
 }
 dependencies = {
-    "lua = 5.1",
+    "lua >= 5.1",
     "luarocks-build-xmake"
 }
 build = {
     type = "xmake",
     install = {
         lua = {
-            ["luaohook.keyboardkeys"] = "src/buttons/keyboardkeys.lua",
-            ["luaohook.mousekeys"] = "src/buttons/mousekeys.lua"
+            ["luaohook.keyboardkeys"] = "src/lua/keyboardkeys.lua",
+            ["luaohook.mousekeys"] = "src/lua/mousekeys.lua",
+            ["luaohook.eventtype"] = "src/lua/events.lua",
         }
     },
 }

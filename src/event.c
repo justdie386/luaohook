@@ -1,7 +1,7 @@
 #include <lauxlib.h>
 #include <lua.h>
 #include <uiohook.h>
-
+//i have no idea how all of this even works.
 static lua_State *luiohook_state;
 
 void luiohook_on_event(uiohook_event *const event) {

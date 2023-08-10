@@ -1,4 +1,5 @@
 package("libuiohook")
+
     set_homepage("https://github.com/kwhat/libuiohook")
     set_description("A multi-platform C library to provide global keyboard and mouse hooks from userland.")
 
@@ -17,7 +18,7 @@ package("libuiohook")
     end)
 package_end()
 
-local windows_packages = {"luajit", "libuiohook"}
+local windows_packages = {"libuiohook"}
 local windows_linker = {"user32", "kernel32", "gdi32", "advapi32"}
 local macos_frameworks = {"CoreFoundation", "Foundation", "Cocoa"}
 local macos_packages = {"libuiohook"}
@@ -57,7 +58,8 @@ target("luaohook.event")
     end
 target("luaohook.mouse")
    add_rules("luarocks.module")
-   add_files("src/mouse.c")
+   add_files("src/mouse/*.c")
+   add_headerfiles("src/mouse/*.h")
    if is_plat("windows") then
        add_packages(windows_packages)
         add_links(windows_linker)
