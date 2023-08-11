@@ -18,9 +18,9 @@ build = {
     type = "xmake",
     install = {
         lua = {
-            ["luaohook.keyboardkeys"] = "src/lua/keyboardkeys.lua",
-            ["luaohook.mousekeys"] = "src/lua/mousekeys.lua",
-            ["luaohook.eventtype"] = "src/lua/events.lua",
+            ["luaohook.keyboardkeys"] = "src/enums/keyboardkeys.lua",
+            ["luaohook.mousebuttons"] = "src/enums/mousebuttons.lua",
+            ["luaohook.eventtype"] = "src/enums/events.lua",
         }
     },
 }

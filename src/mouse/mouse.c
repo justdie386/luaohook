@@ -1,21 +1,23 @@
 #include "wheel.h"
 #include "press.h"
-
+#include "move.h"
+#include "info.h"
+#include <lauxlib.h>
 
 
 static const struct luaL_Reg luiohook_mouse[] = {
     {"press", press},
-    {"pressCoordinates", pressCoordinates},
-    {"pressHold", pressHold},
-    {"releaseHold", releaseHold},
-    {"getWidth", get_monitor_width},
-    {"getHeight", get_monitor_height},
-    {"getMouseAccelerationMultiplier", get_acceleration_multiplier},
-    {"getMouseAccelerationThreshold", get_acceleration_threshold},
-    {"getKeyboardRepeatDelay", get_keyboard_repeat_delay},
-    {"getMouseSensitivity", get_sensitivity},
-    {"getKeyboardRepeatRate", get_keyboard_repeat_rate},
     {"scroll", scroll},
+    {"move", move},
+    {"pressCoordinates", pressCoordinates},
+    {"pressHold", hold},
+    {"releaseHold", release},
+    {"getSensitivity", get_sensitivity},
+    {"getKeyboardRepeatRate", get_keyboard_repeat_rate},
+    {"getKeyboardRepeatDelay", get_keyboard_repeat_delay},
+    {"getAccelerationMultiplier", get_acceleration_multiplier},
+    {"getMonitorHeight", get_monitor_height},
+    {"getMonitorWidth", get_monitor_width},
     {NULL, NULL}};
 
 int luaopen_luaohook_mouse(lua_State *L) {
