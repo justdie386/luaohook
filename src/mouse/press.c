@@ -25,12 +25,12 @@ int press(lua_State *L) {
   event->type = EVENT_MOUSE_PRESSED;
   event->data.mouse.button = lua_tonumber(L, 1);
   coords p = findcoordinates();
-  event->data.mouse.x = p.x/2;
+  event->data.mouse.x = p.x;
   event->data.mouse.y = p.y;
   hook_post_event(event);
   event->type = EVENT_MOUSE_RELEASED;
   coords p2 = findcoordinates();
-  event->data.mouse.x = p2.x/2;
+  event->data.mouse.x = p2.x;
   event->data.mouse.y = p2.y;
   hook_post_event(event);
   free(event);

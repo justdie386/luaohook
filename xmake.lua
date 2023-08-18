@@ -4,7 +4,7 @@ package("libuiohook")
     set_description("A multi-platform C library to provide global keyboard and mouse hooks from userland.")
 
     add_urls("https://github.com/kwhat/libuiohook.git")
-    add_versions("1.2.2", "23acecfe207f8a8b5161bec97a8a6fd6ad0aea88")
+    add_versions("1.3", "f5ef7828a6ea2da9a57ab1d284addc2dd983becf")
     if is_plat("windows") then
     add_deps("cmake")
     else

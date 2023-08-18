@@ -1,56 +1,20 @@
 {
-    find_program_fetch_package_system = {
-        cmake = [[C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake]]
-    },
-    find_program_msvc_arch_x64_plat_windows_checktoolsh = {
-        ["link.exe"] = [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\bin\HostX64\x64\link.exe]]
-    },
-    find_program_msvc_arch_x64_plat_windows_checktoolcxx = {
-        ["cl.exe"] = [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\bin\HostX64\x64\cl.exe]]
-    },
-    find_program_fetch_package_xmake = {
-        cmake = false
-    },
-    find_package_windows_x64_fetch_package_xmake = {
-        ["xmake::libuiohook_cafd076020034bb5bf8455b8c8407c4a_release_1.2.2_external"] = {
-            libfiles = {
-                [[C:\Users\justi\AppData\Local\.xmake\packages\l\libuiohook\1.2.2\cafd076020034bb5bf8455b8c8407c4a\lib\uiohook.lib]]
-            },
-            linkdirs = {
-                [[C:\Users\justi\AppData\Local\.xmake\packages\l\libuiohook\1.2.2\cafd076020034bb5bf8455b8c8407c4a\lib]]
-            },
-            static = true,
-            sysincludedirs = {
-                [[C:\Users\justi\AppData\Local\.xmake\packages\l\libuiohook\1.2.2\cafd076020034bb5bf8455b8c8407c4a\include]]
-            },
-            version = "1.2.2",
+    ["detect.sdks.find_vcpkgdir"] = "C:/Users/justi/scoop/apps/vcpkg/current",
+    find_package_windows_x64 = {
+        lua_release = {
             links = {
-                "uiohook"
+                "lua"
+            },
+            version = "5.4.4",
+            linkdirs = {
+                [[C:\Users\justi\scoop\apps\vcpkg\current\installed\x64-windows-static\lib]]
+            },
+            libfiles = {
+                [[C:\Users\justi\scoop\apps\vcpkg\current\installed\x64-windows-static\lib\lua.lib]]
+            },
+            includedirs = {
+                [[C:\Users\justi\scoop\apps\vcpkg\current\installed\x64-windows-static\include]]
             }
         }
-    },
-    find_programver = {
-        ["C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\cl.exe"] = "19.36.32535"
-    },
-    find_program = {
-        zig = false,
-        ["7z"] = [[C:\Users\justi\xmake\winenv\bin\7z]],
-        gzip = false,
-        unzip = false,
-        ["cl.exe"] = [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\bin\HostX64\x64\cl.exe]],
-        git = "git",
-        ["C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\cl.exe"] = [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\bin\HostX64\x64\cl.exe]]
-    },
-    find_program_msvc_arch_x64_plat_windows_checktoolcc = {
-        ["cl.exe"] = [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\bin\HostX64\x64\cl.exe]]
-    },
-    ["lib.detect.has_flags"] = {
-        ["windows_x64_C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\cl.exe_19.36.32535_cc_cxflags_-nologo_cl_external_includedir"] = true,
-        ["windows_x64_C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\cl.exe_19.36.32535_cc_cxflags_-nologo_-DNDEBUG"] = true,
-        ["windows_x64_C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\cl.exe_19.36.32535_cc_cxflags_-nologo_cl_sourceDependencies"] = true,
-        ["windows_x64_C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\cl.exe_19.36.32535_cc__-nologo_-O2 -fp:fast"] = true
-    },
-    find_programver_fetch_package_system = {
-        ["C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake"] = "3.26.0-msvc3"
     }
 }

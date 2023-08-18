@@ -16,16 +16,14 @@
 #include <lauxlib.h>
 #include <lua.h>
 #include "wheel.h"
-// no comments, enjoy this *perfect* code
 static uiohook_event *event = NULL;
 
 int scroll(lua_State *L){
-    luaL_argcheck(L, lua_isnumber(L, 1), 1, "expected number");
     event = (uiohook_event *)malloc(sizeof(uiohook_event));
     event->type = EVENT_MOUSE_WHEEL;
     event->data.mouse.button = WHEEL_UNIT_SCROLL;
     coords p = findcoordinates();
-    event->data.wheel.x = p.x/2;
+    event->data.wheel.x = p.x;
     event->data.wheel.y = p.y;
     event->data.wheel.direction = WHEEL_VERTICAL_DIRECTION;
     hook_post_event(event);

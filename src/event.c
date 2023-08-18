@@ -4,7 +4,7 @@
 //i have no idea how all of this even works.
 static lua_State *luiohook_state;
 
-void luiohook_on_event(uiohook_event *const event) {
+void luiohook_on_event(uiohook_event *const event, void *user_data) {
   if (event->type == EVENT_KEY_PRESSED) {
     lua_pushstring(luiohook_state, "uiohook_key_pressed");
     lua_gettable(luiohook_state, LUA_REGISTRYINDEX);
@@ -86,8 +86,7 @@ int luiohook_unregister(lua_State *L) {
 
 int luiohook_run(lua_State *L) {
   luiohook_state = L;
-
-  hook_set_dispatch_proc(&luiohook_on_event);
+  hook_set_dispatch_proc(&luiohook_on_event, NULL);
   hook_run();
   return 0;
 }

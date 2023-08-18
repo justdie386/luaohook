@@ -1,41 +1,41 @@
 [
 {
   "directory": "c:\\Users\\justi\\Desktop\\luaohook",
-  "arguments": ["C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\cl.exe", "/c", "/nologo", "/IC:\\lua\\luajit\\include", "/O2", "/fp:fast", "/EHsc", "/IC:\\Users\\justi\\AppData\\Local\\.xmake\\packages\\l\\libuiohook\\1.2.2\\cafd076020034bb5bf8455b8c8407c4a\\include", "/DNDEBUG", "/Fobuild\\.objs\\luaohook.event\\windows\\x64\\release\\src\\event.c.obj", "src\\event.c"],
+  "arguments": ["C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\cl.exe", "/c", "/nologo", "/IC:\\lua\\luajit\\include", "/O2", "/fp:fast", "/EHsc", "/DNDEBUG", "/Fobuild\\.objs\\luaohook.keyboard\\windows\\x64\\release\\src\\keyboard.c.obj", "src\\keyboard.c"],
+  "file": "src\\keyboard.c"
+},
+{
+  "directory": "c:\\Users\\justi\\Desktop\\luaohook",
+  "arguments": ["C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\cl.exe", "/c", "/nologo", "/IC:\\lua\\luajit\\include", "/O2", "/fp:fast", "/EHsc", "/DNDEBUG", "/Fobuild\\.objs\\luaohook.event\\windows\\x64\\release\\src\\event.c.obj", "src\\event.c"],
   "file": "src\\event.c"
 },
 {
   "directory": "c:\\Users\\justi\\Desktop\\luaohook",
-  "arguments": ["C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\cl.exe", "/c", "/nologo", "/IC:\\lua\\luajit\\include", "/O2", "/fp:fast", "/EHsc", "/IC:\\Users\\justi\\AppData\\Local\\.xmake\\packages\\l\\libuiohook\\1.2.2\\cafd076020034bb5bf8455b8c8407c4a\\include", "/DNDEBUG", "/Fobuild\\.objs\\luaohook.mouse\\windows\\x64\\release\\src\\mouse\\info.c.obj", "src\\mouse\\info.c"],
+  "arguments": ["C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\cl.exe", "/c", "/nologo", "/IC:\\lua\\luajit\\include", "/O2", "/fp:fast", "/EHsc", "/DNDEBUG", "/Fobuild\\.objs\\luaohook.mouse\\windows\\x64\\release\\src\\mouse\\info.c.obj", "src\\mouse\\info.c"],
   "file": "src\\mouse\\info.c"
 },
 {
   "directory": "c:\\Users\\justi\\Desktop\\luaohook",
-  "arguments": ["C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\cl.exe", "/c", "/nologo", "/IC:\\lua\\luajit\\include", "/O2", "/fp:fast", "/EHsc", "/IC:\\Users\\justi\\AppData\\Local\\.xmake\\packages\\l\\libuiohook\\1.2.2\\cafd076020034bb5bf8455b8c8407c4a\\include", "/DNDEBUG", "/Fobuild\\.objs\\luaohook.mouse\\windows\\x64\\release\\src\\mouse\\mouse.c.obj", "src\\mouse\\mouse.c"],
+  "arguments": ["C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\cl.exe", "/c", "/nologo", "/IC:\\lua\\luajit\\include", "/O2", "/fp:fast", "/EHsc", "/DNDEBUG", "/Fobuild\\.objs\\luaohook.mouse\\windows\\x64\\release\\src\\mouse\\mouse.c.obj", "src\\mouse\\mouse.c"],
   "file": "src\\mouse\\mouse.c"
 },
 {
   "directory": "c:\\Users\\justi\\Desktop\\luaohook",
-  "arguments": ["C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\cl.exe", "/c", "/nologo", "/IC:\\lua\\luajit\\include", "/O2", "/fp:fast", "/EHsc", "/IC:\\Users\\justi\\AppData\\Local\\.xmake\\packages\\l\\libuiohook\\1.2.2\\cafd076020034bb5bf8455b8c8407c4a\\include", "/DNDEBUG", "/Fobuild\\.objs\\luaohook.mouse\\windows\\x64\\release\\src\\mouse\\move.c.obj", "src\\mouse\\move.c"],
+  "arguments": ["C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\cl.exe", "/c", "/nologo", "/IC:\\lua\\luajit\\include", "/O2", "/fp:fast", "/EHsc", "/DNDEBUG", "/Fobuild\\.objs\\luaohook.mouse\\windows\\x64\\release\\src\\mouse\\move.c.obj", "src\\mouse\\move.c"],
   "file": "src\\mouse\\move.c"
 },
 {
   "directory": "c:\\Users\\justi\\Desktop\\luaohook",
-  "arguments": ["C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\cl.exe", "/c", "/nologo", "/IC:\\lua\\luajit\\include", "/O2", "/fp:fast", "/EHsc", "/IC:\\Users\\justi\\AppData\\Local\\.xmake\\packages\\l\\libuiohook\\1.2.2\\cafd076020034bb5bf8455b8c8407c4a\\include", "/DNDEBUG", "/Fobuild\\.objs\\luaohook.mouse\\windows\\x64\\release\\src\\mouse\\press.c.obj", "src\\mouse\\press.c"],
+  "arguments": ["C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\cl.exe", "/c", "/nologo", "/IC:\\lua\\luajit\\include", "/O2", "/fp:fast", "/EHsc", "/DNDEBUG", "/Fobuild\\.objs\\luaohook.mouse\\windows\\x64\\release\\src\\mouse\\press.c.obj", "src\\mouse\\press.c"],
   "file": "src\\mouse\\press.c"
 },
 {
   "directory": "c:\\Users\\justi\\Desktop\\luaohook",
-  "arguments": ["C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\cl.exe", "/c", "/nologo", "/IC:\\lua\\luajit\\include", "/O2", "/fp:fast", "/EHsc", "/IC:\\Users\\justi\\AppData\\Local\\.xmake\\packages\\l\\libuiohook\\1.2.2\\cafd076020034bb5bf8455b8c8407c4a\\include", "/DNDEBUG", "/Fobuild\\.objs\\luaohook.mouse\\windows\\x64\\release\\src\\mouse\\wheel.c.obj", "src\\mouse\\wheel.c"],
+  "arguments": ["C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\cl.exe", "/c", "/nologo", "/IC:\\lua\\luajit\\include", "/O2", "/fp:fast", "/EHsc", "/DNDEBUG", "/Fobuild\\.objs\\luaohook.mouse\\windows\\x64\\release\\src\\mouse\\wheel.c.obj", "src\\mouse\\wheel.c"],
   "file": "src\\mouse\\wheel.c"
 },
 {
   "directory": "c:\\Users\\justi\\Desktop\\luaohook",
-  "arguments": ["C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\cl.exe", "/c", "/nologo", "/IC:\\lua\\luajit\\include", "/O2", "/fp:fast", "/EHsc", "/IC:\\Users\\justi\\AppData\\Local\\.xmake\\packages\\l\\libuiohook\\1.2.2\\cafd076020034bb5bf8455b8c8407c4a\\include", "/DNDEBUG", "/Fobuild\\.objs\\luaohook.mouse\\windows\\x64\\release\\src\\mouse\\win32\\win32.c.obj", "src\\mouse\\win32\\win32.c"],
+  "arguments": ["C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\cl.exe", "/c", "/nologo", "/IC:\\lua\\luajit\\include", "/O2", "/fp:fast", "/EHsc", "/DNDEBUG", "/Fobuild\\.objs\\luaohook.mouse\\windows\\x64\\release\\src\\mouse\\win32\\win32.c.obj", "src\\mouse\\win32\\win32.c"],
   "file": "src\\mouse\\win32\\win32.c"
-},
-{
-  "directory": "c:\\Users\\justi\\Desktop\\luaohook",
-  "arguments": ["C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\cl.exe", "/c", "/nologo", "/IC:\\lua\\luajit\\include", "/O2", "/fp:fast", "/EHsc", "/IC:\\Users\\justi\\AppData\\Local\\.xmake\\packages\\l\\libuiohook\\1.2.2\\cafd076020034bb5bf8455b8c8407c4a\\include", "/DNDEBUG", "/Fobuild\\.objs\\luaohook.keyboard\\windows\\x64\\release\\src\\keyboard.c.obj", "src\\keyboard.c"],
-  "file": "src\\keyboard.c"
 }]

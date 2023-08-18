@@ -1,6 +1,6 @@
 #ifndef INFO_H_
 #define INFO_H_
-
+#include <lauxlib.h>
 int get_sensitivity(lua_State *L);
 int get_keyboard_repeat_rate(lua_State *L);
 int get_keyboard_repeat_delay(lua_State *L);

@@ -4,7 +4,6 @@
 #include "info.h"
 #include <lauxlib.h>
 
-
 static const struct luaL_Reg luiohook_mouse[] = {
     {"press", press},
     {"scroll", scroll},
