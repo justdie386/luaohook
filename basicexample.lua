@@ -3,8 +3,7 @@ local mouse = require "luaohook.mouse"
 local event = require "luaohook.event"
 local keys = require "luaohook.keyboardkeys"
 local mouseButtons = require "luaohook.mousebuttons"
-event.register(0x0041, function()
-    mouse.press(1)
+event.register(keys["7"], function()
+    print("IT WORKED!")
 end)
-
 event.run()

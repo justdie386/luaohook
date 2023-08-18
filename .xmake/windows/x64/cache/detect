@@ -2,15 +2,15 @@
     ["detect.sdks.find_vcpkgdir"] = "C:/Users/justi/scoop/apps/vcpkg/current",
     find_package_windows_x64 = {
         lua_release = {
+            libfiles = {
+                [[C:\Users\justi\scoop\apps\vcpkg\current\installed\x64-windows-static\lib\lua.lib]]
+            },
             links = {
                 "lua"
             },
             version = "5.4.4",
             linkdirs = {
                 [[C:\Users\justi\scoop\apps\vcpkg\current\installed\x64-windows-static\lib]]
-            },
-            libfiles = {
-                [[C:\Users\justi\scoop\apps\vcpkg\current\installed\x64-windows-static\lib\lua.lib]]
             },
             includedirs = {
                 [[C:\Users\justi\scoop\apps\vcpkg\current\installed\x64-windows-static\include]]
