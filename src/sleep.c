@@ -8,6 +8,7 @@
 
 int sleep_function(lua_State *L){
     sleep(lua_tonumber(L, 1));
+    return 0;
 }
 
 static const struct luaL_Reg luiohook_sleep[] = {
