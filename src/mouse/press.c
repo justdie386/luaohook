@@ -3,7 +3,6 @@
 #include <winuser.h>
 #include "win32/win32.h"
 #define coords POINT
-#define sleep(x) Sleep(1000 * (x))
 #elif __APPLE__
 #include <unistd.h>
 #include "osx/osx.h"

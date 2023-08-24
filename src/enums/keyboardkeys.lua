@@ -30,7 +30,6 @@ local enums = {
     
     ["BACK_QUOTE"] = 0x00C0,
     ["BACKQUOTE"] = 0x00C0,
-    
     ["0"] = 0x0030,
     ["1"] = 0x0031,
     ["2"] = 0x0032,
@@ -41,23 +40,18 @@ local enums = {
     ["7"] = 0x0037,
     ["8"] = 0x0038,
     ["9"] = 0x0039,
-    
     ["PLUS"] = 0x0209,
     ["MINUS"] = 0x002D,
     ["EQUALS"] = 0x003D,
     ["ASTERISK"] = 0x0097,
-    
     ["AT"] = 0x0200,
     ["AMPERSAND"] = 0x0096,
     ["DOLLAR"] = 0x0203,
     ["EXCLAMATION_MARK"] = 0x0205,
     ["EXCLAMATION_DOWN"] = 0x0206,
-    
     ["BACKSPACE"] = 0x0008,
-    
     ["TAB"] = 0x0009,
     ["CAPS_LOCK"] = 0x0014,
-    
     ["A"] = 0x0041,
     ["B"] = 0x0042,
     ["C"] = 0x0043,

@@ -1,5 +1,6 @@
-#ifndef MOVE_H_
-#define MOVE_H_
+#ifndef PRESS_H_
+#define PRESS_H_
+
 #ifdef _WIN32
 #include <windows.h>
 #include <winuser.h>
@@ -14,10 +15,14 @@
 #include "x11/x11.h"
 #define coords MouseCoordinates
 #endif
-#include <uiohook.h>
+#include "uiohook.h"
 #include <lauxlib.h>
 #include <lua.h>
 
-int move();
+int press(lua_State *L);
+int pressCoordinates(lua_State *L);
+int hold(lua_State *L);
+int release(lua_State *L);
 
-#endif
+
+#endif /* PRESS_H_ */

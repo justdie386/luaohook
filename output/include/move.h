@@ -14,7 +14,7 @@
 #include "x11/x11.h"
 #define coords MouseCoordinates
 #endif
-#include <uiohook.h>
+#include "uiohook.h"
 #include <lauxlib.h>
 #include <lua.h>
 

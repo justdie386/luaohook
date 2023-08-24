@@ -7,8 +7,10 @@ package("libuiohook")
     add_versions("1.3", "f5ef7828a6ea2da9a57ab1d284addc2dd983becf")
     if is_plat("windows") then
     add_deps("cmake")
-    else
+    elseif is_plat("linux") then
     add_deps("cmake", "libxcb", "libx11", "libxkbcommon", "libxtst")
+    elseif is_plat("macosx") then
+    add_deps("cmake")
     end
     on_install(function (package)
         local configs = {}
@@ -76,3 +78,7 @@ target("luaohook.mouse")
         add_headerfiles("src/mouse/x11/x11.h")
         add_files("src/mouse/x11/x11.c")
    end
+   target("luaohook.sleep")
+       add_rules("luarocks.module")
+        add_files("src/sleep.c")
+        add_links(windows_linker)

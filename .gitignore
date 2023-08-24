@@ -1,2 +1,5 @@
 
 .xmake/
+output/
+.vscode/
+.cache/
