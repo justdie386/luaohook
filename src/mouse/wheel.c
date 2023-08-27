@@ -7,12 +7,13 @@
 #include <unistd.h>
 #include "osx/osx.h"
 #define coords CGPoint
-#elif __linux__ 
+#else
 #include <unistd.h>
 #include "x11/x11.h"
 #define coords MouseCoordinates
 #endif
-#include "uiohook.h"
+#include <stdlib.h>
+#include <uiohook.h>
 #include <lauxlib.h>
 #include <lua.h>
 #include "wheel.h"

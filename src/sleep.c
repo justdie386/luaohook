@@ -1,7 +1,7 @@
-#ifndef _WIN32_
+#ifdef _WIN32
 #include <windows.h>
 #define sleep(seconds) Sleep(seconds * 1000)
-#elif
+#else
 #include <unistd.h>
 #endif
 #include <lauxlib.h>

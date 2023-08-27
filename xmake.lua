@@ -7,10 +7,10 @@ package("libuiohook")
     add_versions("1.3", "f5ef7828a6ea2da9a57ab1d284addc2dd983becf")
     if is_plat("windows") then
     add_deps("cmake")
-    elseif is_plat("linux") then
-    add_deps("cmake", "libxcb", "libx11", "libxkbcommon", "libxtst")
     elseif is_plat("macosx") then
     add_deps("cmake")
+    else
+        add_deps("cmake", "libxcb", "libx11", "libxkbcommon", "libxtst")
     end
     on_install(function (package)
         local configs = {}
@@ -24,7 +24,7 @@ local windows_packages = {"libuiohook"}
 local windows_linker = {"user32", "kernel32", "gdi32", "advapi32"}
 local macos_frameworks = {"CoreFoundation", "Foundation", "Cocoa"}
 local macos_packages = {"libuiohook"}
-local linux_packages = {"libuiohook", "libxkbcommon", "libxcb", "libx11"}
+local linux_packages = {"libuiohook", "libxkbcommon", "libxcb", "libx11", "luajit"}
 local linux_linkers = {"xkbcommon", "xcb", "Xinerama", "X11", "Xt", "xkbcommon-x11"}
 add_rules("mode.debug", "mode.release")
 if is_plat("windows") then
@@ -41,7 +41,7 @@ target("luaohook.keyboard")
     elseif is_plat("macosx") then
         add_packages(macos_packages)
         add_frameworks(macos_frameworks)
-    elseif is_plat("linux") then
+    else
         add_links(linux_linkers)
         add_packages(linux_packages)
     end
@@ -54,7 +54,7 @@ target("luaohook.event")
     elseif is_plat("macosx") then
         add_packages(macos_packages)
         add_frameworks(macos_frameworks)
-    elseif is_plat("linux") then
+        else
         add_links(linux_linkers)
         add_packages(linux_packages)
     end
@@ -72,7 +72,7 @@ target("luaohook.mouse")
         add_frameworks(macos_frameworks)
         add_headerfiles("src/mouse/apple/osx.h")
         add_files("src/mouse/apple/osx.c")
-    elseif is_plat("linux") then
+        else
         add_links(linux_linkers)
         add_packages(linux_packages)
         add_headerfiles("src/mouse/x11/x11.h")
@@ -81,4 +81,3 @@ target("luaohook.mouse")
    target("luaohook.sleep")
        add_rules("luarocks.module")
         add_files("src/sleep.c")
-        add_links(windows_linker)
