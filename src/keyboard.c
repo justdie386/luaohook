@@ -7,7 +7,7 @@
 #include <lua.h>
 #include <stdlib.h>
 #include <uiohook.h>
-// no comments, enjoy this *perfect* code
+// Damn
 static uiohook_event *event = NULL;
 int kbpress(lua_State *L) {
   luaL_argcheck(L, lua_isnumber(L, 1), 1, "expected number");
