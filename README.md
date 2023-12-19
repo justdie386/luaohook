@@ -2,6 +2,9 @@
 
 Thanks to kwat for making https://github.com/kwhat/libuiohook (Credit i guess)
 
+I highly recommend you directly build it from source by cloning the repo and running xmake, the build extension i use for xmake to work with luarocks is kind of old, and even the creator was suprised it still somewhat worked, so yeah, try the luarocks one first, but no guaranties it'll work on unix. On windows it should most likely work with no issues tho
+
+
 luaohook is a fully cross platform global keyboard and mouse hooks for lua, built around libuiohook, a C cross platform keyboard and mouse global hook library.
 
 IMPORTANT: the scroll function seems to be having issues with luajit, and may or may not only work one in twenty tries, so switch to the regular lua interpreter if you plan on using this.
